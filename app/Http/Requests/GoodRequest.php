@@ -28,7 +28,7 @@ class GoodRequest extends FormRequest
             'serial' => ['bail', ' required', 'regex:/^[a-zA-Z0-9_.-]*$/', 'min:3', 'max:50'],
             'price' => ['bail', 'required', 'numeric', 'min:1'],
             'weight' => ['bail', 'required', 'numeric', 'min:1'],
-            'dollar' => ['bail', 'required', 'numeric:2'],
+            'dollar' => ['bail', 'nullable' ,'numeric:2'],
         ];
     }
 

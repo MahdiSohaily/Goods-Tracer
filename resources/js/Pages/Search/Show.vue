@@ -25,10 +25,10 @@
                                             <thead class="text-primary">
                                                 <th>شماره</th>
                                                 <th>اسم</th>
-                                                <th>کتگوری</th>
-                                                <th>واحد</th>
-                                                <th>تعداد</th>
-                                                <th>مشخصات جنس</th>
+                                                <th>سریال نمبر</th>
+                                                <th>قیمت</th>
+                                                <th>وزن</th>
+                                                <th>نرخ ارز</th>
                                                 <th>عملیات</th>
                                             </thead>
                                             <tbody>
@@ -59,9 +59,6 @@
                                         </table>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="tab-pane" id="goodsList">
-
                             </div>
                         </div>
                     </div>

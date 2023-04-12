@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('serial');
             $table->integer("price");
             $table->float("weigth",6,2);
-            $table->float("dollarRate",6,2);
+            $table->float("dollarRate",6,2)->nullable();
             $table->timestamps();
         });
     }
