@@ -26936,7 +26936,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         }, 1032
         /* PROPS, DYNAMIC_SLOTS */
         , ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-          href: _ctx.route('rate', rate),
+          href: _ctx.route('rate', rate.id),
           rel: "tooltip",
           title: "",
           "class": "btn btn-danger btn-link btn-sm"

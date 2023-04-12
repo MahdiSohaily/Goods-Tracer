@@ -59,6 +59,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::post('/rates', 'store')->name('rate.store'); /* Registering New rate */
         Route::get('/rates/{rate}', 'edit')->name('rate.edit'); /* edit regitered rates */
         Route::put('/rates', 'update')->name('rate.update'); /* update regestred rate */
+        Route::get('/rates/delete/{rate}','deleteRate')->name('deleteRate');/**Delete specific Rate */
     });
     
     /*Search Related Routes*/

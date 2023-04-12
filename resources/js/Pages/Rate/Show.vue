@@ -54,7 +54,7 @@
                                                         <i class="material-icons">edit</i>
                                                         <div class="ripple-container"></div>
                                                         </Link>
-                                                        <Link :href="route('rate', rate)" rel="tooltip" title=""
+                                                        <Link :href="route('rate', rate.id)" rel="tooltip" title=""
                                                             class="btn btn-danger btn-link btn-sm">
                                                         <i class="material-icons">close</i>
                                                         <div class="ripple-container"></div>
