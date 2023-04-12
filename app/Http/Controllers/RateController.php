@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use App\Models\Rate;
 
 class RateController extends Controller
 {
@@ -14,7 +15,8 @@ class RateController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Rate/Show');
+        $rates = Rate::all();
+        return Inertia::render('Rate/Show',['rates'=>$rates]);
     }
 
     /**
@@ -35,7 +37,15 @@ class RateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'rate' => 'required|integer|min:0',
+        ]);
+
+        $rate = new Rate();
+        $rate-> rate = $request->input('rate');
+        $rate->save();
+
+        return $this->index();
     }
 
     /**

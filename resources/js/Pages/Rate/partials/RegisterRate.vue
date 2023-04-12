@@ -1,7 +1,7 @@
 <template>
     <jet-form-section @submitted="RegisterRate">
       <template #title>
-        <h5>نرخ ارز رایج در معملات</h5>
+        <h5>نرخ ارز رایج در معاملات</h5>
       </template>
   
       <template #description>
@@ -11,15 +11,15 @@
       <template #form>
         <div class="row pb-2">
           <div class="col-md-6">
-            <jet-label for="name" value="نام جنس" />
+            <jet-label for="rate" value="نرخ ارز" />
             <jet-input
-              id="name"
-              type="text"
+              id="rate"
+              type="number"
               class="mt-1 form-control"
-              v-model="form.name"
-              autocomplete="name"
+              v-model="form.rate"
+              autocomplete="rate"
             />
-            <jet-input-error :message="form.errors.name" class="mt-2" />
+            <jet-input-error :message="form.errors.rate" class="mt-2" />
           </div>
         </div>
         <div class="clearfix"></div>
@@ -35,7 +35,7 @@
           :class="{ 'opacity-25': form.processing }"
           :disabled="form.processing"
         >
-          ایجاد
+          ثبت
         </button>
       </template>
     </jet-form-section>
@@ -64,18 +64,14 @@
       return {
         form: this.$inertia.form({
           _method: "post",
-          name: null,
-          serial: null,
-          price: null,
-          weight: null,
-          dollar: null,
+          rate: null,
         }),
       };
     },
   
     methods: {
       RegisterRate() {
-        this.form.post(route("good.create"), {
+        this.form.post(route("rate.store"), {
           errorBag: "goods",
           preserveScroll: true,
           onSuccess: () => {

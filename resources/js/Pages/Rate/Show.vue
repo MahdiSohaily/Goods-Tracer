@@ -9,7 +9,7 @@
                                 <ul class="nav nav-tabs" data-tabs="tabs">
                                     <li class="nav-item">
                                         <a class="nav-link active" href="#profile" data-toggle="tab">
-                                            <i class="material-icons">fact_check</i>درج نرخ ارز رایج در معاملات   
+                                            <i class="material-icons">fact_check</i>درج نرخ ارز رایج در معاملات
                                             <div class="ripple-container"></div>
                                         </a>
                                     </li>
@@ -27,7 +27,7 @@
                         <div class="tab-content">
                             <div class="tab-pane active" id="profile">
                                 <div class="row">
-                                    <RegisterRate :categories="categories" :unites="unites"/>
+                                    <RegisterRate :categories="categories" :unites="unites" />
                                 </div>
                             </div>
                             <div class="tab-pane" id="goodsList">
@@ -39,38 +39,34 @@
                                     <div class="card-body table-responsive">
                                         <table class="table table-hover">
                                             <thead class="text-primary">
-                                            <th>شماره</th>
-                                            <th>اسم</th>
-                                            <th>کتگوری</th>
-                                            <th>واحد</th>
-                                            <th>تعداد</th>
-                                            <th>مشخصات جنس</th>
-                                            <th>عملیات</th>
+                                                <th>شماره</th>
+                                                <th>نرخ ارز</th>
+                                                <th>عملیات</th>
                                             </thead>
                                             <tbody>
-                                            <tr v-for="(good, index) in goods" v-bind:key="index">
-                                                <td>{{ good.id }}</td>
-                                                <td>{{ good.name }}</td>
-                                                <td>{{ good.serial}}</td>
-                                                <td>{{ good.price}}</td>
-                                                <td>{{ good.weigth}}</td>
-                                                <td>{{ good.dollarRate}}</td>
-                                                <td class="td-actions text-right">
-                                                    <Link :href="route('good.edit',good)"
-                                                          class="btn btn-primary btn-link btn-sm"
-                                                          data-original-title="Edit Task">
+                                                <tr v-for="(rate, index) in rates" v-bind:key="index">
+                                                    <td>{{ rate.id }}</td>
+                                                    <td>{{ rate.name }}</td>
+                                                    <td>{{ rate.serial }}</td>
+                                                    <td>{{ rate.price }}</td>
+                                                    <td>{{ rate.weigth }}</td>
+                                                    <td>{{ rate.dollarRate }}</td>
+                                                    <td class="td-actions text-right">
+                                                        <Link :href="route('rate.edit', rate)"
+                                                            class="btn btn-primary btn-link btn-sm"
+                                                            data-original-title="Edit Task">
                                                         <i class="material-icons">edit</i>
                                                         <div class="ripple-container"></div>
-                                                    </Link>
-                                                    <Link :href="route('deleteGood', good)" rel="tooltip" title=""
-                                                          class="btn btn-danger btn-link btn-sm"
-                                                          data-original-title="Remove" data-toggle="modal"
-                                                          data-target="#myModal">
+                                                        </Link>
+                                                        <Link :href="route('deleterate', rate)" rel="tooltip" title=""
+                                                            class="btn btn-danger btn-link btn-sm"
+                                                            data-original-title="Remove" data-toggle="modal"
+                                                            data-target="#myModal">
                                                         <i class="material-icons">close</i>
                                                         <div class="ripple-container"></div>
-                                                    </link>
-                                                </td>
-                                            </tr>
+                                                        </link>
+                                                    </td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -85,27 +81,25 @@
 </template>
 
 <script>
-    import {defineComponent} from 'vue';
-    import {Head, Link} from '@inertiajs/inertia-vue3';
-    import AppLayout from '@/Layouts/AppLayout.vue';
-    import RegisterRate from './partials/RegisterRate.vue';
+import { defineComponent } from 'vue';
+import { Head, Link } from '@inertiajs/inertia-vue3';
+import AppLayout from '@/Layouts/AppLayout.vue';
+import RegisterRate from './partials/RegisterRate.vue';
 
-    export default defineComponent({
+export default defineComponent({
 
-        props: ['sessions', 'goods', 'categories', 'unites'],
-        data() {
-            return {
-                goods: this.goods,
-                categories: this.categories,
-                unites: this.unites
-            }
-        },
+    props: ['sessions', 'rates'],
+    data() {
+        return {
+            rates: this.rates
+        }
+    },
 
-        components: {
-    AppLayout,
-    Head,
-    Link,
-    RegisterRate
-},
-    })
+    components: {
+        AppLayout,
+        Head,
+        Link,
+        RegisterRate
+    },
+})
 </script>

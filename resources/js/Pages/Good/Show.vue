@@ -34,8 +34,7 @@
                             <div :class="tab === 'list' ? 'active' : ''" class="tab-pane" id="goodsList">
                                 <div class="card">
                                     <div class="card-header card-header-primary">
-                                        <h4 class="card-title">درخواست های اخیر</h4>
-                                        <p class="card-category">درخواست های که اخیرا ثبت سیتم گردیده اند</p>
+                                        <h4 class="card-title">اجناس موجود در سیستم</h4>
                                     </div>
                                     <div class="card-body table-responsive">
                                         <table class="table table-hover">
