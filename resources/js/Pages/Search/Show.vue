@@ -9,6 +9,8 @@
                                 <div class="submitSearch">
                                     <input id="search" class="mt-1 form-control"
                                         placeholder="بارکد جنس مورد نظر را وارد کنید" @keyup="submit" v-model="serial" />
+                                    <input :checked="this.super" type="checkbox" name="super" id="super">
+                                    <label class="text-white">جستجوی پیشرفته</label>
                                 </div>
                             </div>
                         </div>
@@ -86,6 +88,10 @@
 ::placeholder {
     color: white;
 }
+
+input{
+color: white;
+}
 </style>
 
 <script>
@@ -100,6 +106,7 @@ export default defineComponent({
         return {
             goods: this.goods,
             serial: null,
+            super: true
         }
     },
 
@@ -115,7 +122,6 @@ export default defineComponent({
                 this.timer = null;
             }
             this.timer = setTimeout(() => {
-                alert(this.serial)
             }, 800);
 
         },
