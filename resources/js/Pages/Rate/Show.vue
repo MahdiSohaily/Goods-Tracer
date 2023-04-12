@@ -46,22 +46,16 @@
                                             <tbody>
                                                 <tr v-for="(rate, index) in rates" v-bind:key="index">
                                                     <td>{{ rate.id }}</td>
-                                                    <td>{{ rate.name }}</td>
-                                                    <td>{{ rate.serial }}</td>
-                                                    <td>{{ rate.price }}</td>
-                                                    <td>{{ rate.weigth }}</td>
-                                                    <td>{{ rate.dollarRate }}</td>
+                                                    <td>{{ rate.rate }}</td>
                                                     <td class="td-actions text-right">
-                                                        <Link :href="route('rate.edit', rate)"
+                                                        <Link :href="route('rate.edit', rate.id)"
                                                             class="btn btn-primary btn-link btn-sm"
                                                             data-original-title="Edit Task">
                                                         <i class="material-icons">edit</i>
                                                         <div class="ripple-container"></div>
                                                         </Link>
-                                                        <Link :href="route('deleterate', rate)" rel="tooltip" title=""
-                                                            class="btn btn-danger btn-link btn-sm"
-                                                            data-original-title="Remove" data-toggle="modal"
-                                                            data-target="#myModal">
+                                                        <Link :href="route('rate', rate)" rel="tooltip" title=""
+                                                            class="btn btn-danger btn-link btn-sm">
                                                         <i class="material-icons">close</i>
                                                         <div class="ripple-container"></div>
                                                         </link>
