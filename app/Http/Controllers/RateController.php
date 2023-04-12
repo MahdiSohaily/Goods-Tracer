@@ -16,7 +16,7 @@ class RateController extends Controller
     public function index()
     {
         $rates = Rate::all();
-        return Inertia::render('Rate/Show',['rates'=>$rates]);
+        return Inertia::render('Rate/Show',['rates'=>$rates, 'tab'=> 'create']);
     }
 
     /**
@@ -88,8 +88,10 @@ class RateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function deleteRate(Rate $rate)
     {
-        //
+        $rate->delete();
+        $rates = Rate::all();
+        return Inertia::render('Rate/Show',['rates'=>$rates, 'tab'=> 'list']);
     }
 }

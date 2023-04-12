@@ -25,12 +25,12 @@
                     </div>
                     <div class="card-body">
                         <div class="tab-content">
-                            <div class="tab-pane active" id="profile">
+                            <div :class="tab === 'create' ? 'active' : ''" class="tab-pane" id="profile">
                                 <div class="row">
                                     <RegisterRate :categories="categories" :unites="unites" />
                                 </div>
                             </div>
-                            <div class="tab-pane" id="goodsList">
+                            <div :class="tab === 'list' ? 'active' : ''" class="tab-pane" id="goodsList">
                                 <div class="card">
                                     <div class="card-header card-header-primary">
                                         <h4 class="card-title">درخواست های اخیر</h4>
@@ -54,7 +54,7 @@
                                                         <i class="material-icons">edit</i>
                                                         <div class="ripple-container"></div>
                                                         </Link>
-                                                        <Link :href="route('rate', rate.id)" rel="tooltip" title=""
+                                                        <Link :href="route('deleteRate', rate.id)" rel="tooltip" title=""
                                                             class="btn btn-danger btn-link btn-sm">
                                                         <i class="material-icons">close</i>
                                                         <div class="ripple-container"></div>
@@ -82,7 +82,7 @@ import RegisterRate from './partials/RegisterRate.vue';
 
 export default defineComponent({
 
-    props: ['sessions', 'rates'],
+    props: ['sessions', 'rates','tab'],
     data() {
         return {
             rates: this.rates
