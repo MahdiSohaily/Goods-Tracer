@@ -6,7 +6,7 @@
       <Link
         v-if="$page.props.user"
         :href="route('dashboard')"
-        class="text-sm text-gray-700 underline"
+        class="btn btn-primary text-white p-3 mx-3"
       >
         داشبورد
       </Link>
