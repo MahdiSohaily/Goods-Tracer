@@ -40,7 +40,6 @@
                                         <table class="table table-hover">
                                             <thead class="text-primary">
                                                 <th>شماره</th>
-                                                <th>اسم</th>
                                                 <th>سریال نمبر</th>
                                                 <th>قیمت</th>
                                                 <th>وزن</th>
@@ -50,7 +49,6 @@
                                             <tbody>
                                                 <tr v-for="(good, index) in goods" v-bind:key="index">
                                                     <td>{{ good.id }}</td>
-                                                    <td>{{ good.name }}</td>
                                                     <td>{{ good.serial }}</td>
                                                     <td>{{ good.price }}</td>
                                                     <td>{{ good.weigth }}</td>
