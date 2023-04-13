@@ -27,7 +27,7 @@
                         <div class="tab-content">
                             <div :class="tab === 'create' ? 'active' : ''" class="tab-pane" id="profile">
                                 <div class="row">
-                                    <UpdateRate />
+                                    <!-- <UpdateRate /> -->
                                 </div>
                             </div>
                             <div :class="tab === 'list' ? 'active' : ''" class="tab-pane" id="goodsList">
@@ -78,7 +78,7 @@
 import { defineComponent } from 'vue';
 import { Head, Link } from '@inertiajs/inertia-vue3';
 import AppLayout from '@/Layouts/AppLayout.vue';
-import UpdateRate from './partials/UpdateRate.vue';
+// import UpdateRate from './partials/UpdateRate.vue';
 
 export default defineComponent({
 
@@ -93,7 +93,7 @@ export default defineComponent({
         AppLayout,
         Head,
         Link,
-        UpdateRate
+        // UpdateRate
     },
 })
 </script>

@@ -7,7 +7,7 @@
                         <div class="nav-tabs-navigation">
                             <div class="nav-tabs-wrapper">
                                 <div class="submitSearch">
-                                    <input id="search" class="mt-1 form-control"
+                                    <input id="search" class="mt-1 form-control" ref="focused"
                                         placeholder="بارکد جنس مورد نظر را وارد کنید" @keyup="submit" v-model="serial" />
                                     <input :checked="this.super" type="checkbox" name="super" id="super">
                                     <label class="text-white">جستجوی پیشرفته</label>
@@ -89,8 +89,8 @@
     color: white;
 }
 
-input{
-color: white;
+input {
+    color: white;
 }
 </style>
 
@@ -98,6 +98,7 @@ color: white;
 import { defineComponent } from 'vue';
 import { Head, Link } from '@inertiajs/inertia-vue3';
 import AppLayout from '@/Layouts/AppLayout.vue';
+import axios from 'axios';
 
 export default defineComponent({
 
@@ -122,9 +123,30 @@ export default defineComponent({
                 this.timer = null;
             }
             this.timer = setTimeout(() => {
+                if (this.serial.length > 3) {
+
+                }
             }, 800);
 
         },
+        sendPattern() {
+            axios.post((route("rate.store")), {
+                firstName: 'Fred',
+                lastName: 'Flintstone'
+            })
+                .then(function (response) {
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        },
+        getFocuse() {
+            this.$refs.focused.focus();
+        }
     },
+    mounted() {
+        this.getFocuse();
+    }
 })
 </script>
