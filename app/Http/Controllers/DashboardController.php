@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Stock;
 use App\Models\User;
 use App\Models\Good;
+use App\Models\Rate;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Inertia\Inertia;
@@ -15,7 +16,7 @@ class DashboardController extends Controller
     {
         $demands = null;
         $user = Auth::user();
-        $exchangerates = Good::all();
+        $exchangerates = Rate::all();
         $goodsCount = Good::all();
 
         return Inertia::render('Dashboard', [
