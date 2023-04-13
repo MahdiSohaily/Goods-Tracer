@@ -110,8 +110,8 @@ export default defineComponent({
     data() {
         return {
             goods: null,
-            serial: null,
-            mode: false,
+            serial: 857583,
+            mode: true,
             colors: ['aqua','#8bb63a','#b68f3a','#b63a95','#3a86b6']
         }
     },
@@ -155,6 +155,7 @@ export default defineComponent({
     },
     mounted() {
         this.getFocuse();
+        this.submit();
     }
 })
 </script>
