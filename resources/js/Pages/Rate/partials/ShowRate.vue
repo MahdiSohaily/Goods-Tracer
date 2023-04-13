@@ -9,7 +9,7 @@
                                 <ul class="nav nav-tabs" data-tabs="tabs">
                                     <li class="nav-item">
                                         <a class="nav-link active" href="#profile" data-toggle="tab">
-                                            <i class="material-icons">fact_check</i>درج نرخ ارز رایج در معاملات
+                                            <i class="material-icons">fact_check</i>ویرایش نرخ ارز رایج در معاملات
                                             <div class="ripple-container"></div>
                                         </a>
                                     </li>
@@ -27,7 +27,7 @@
                         <div class="tab-content">
                             <div :class="tab === 'create' ? 'active' : ''" class="tab-pane" id="profile">
                                 <div class="row">
-                                    <!-- <UpdateRate /> -->
+                                    <UpdateRate :rate="current" />
                                 </div>
                             </div>
                             <div :class="tab === 'list' ? 'active' : ''" class="tab-pane" id="goodsList">
@@ -78,11 +78,11 @@
 import { defineComponent } from 'vue';
 import { Head, Link } from '@inertiajs/inertia-vue3';
 import AppLayout from '@/Layouts/AppLayout.vue';
-// import UpdateRate from './partials/UpdateRate.vue';
+import UpdateRate from './UpdateRate.vue';
 
 export default defineComponent({
 
-    props: ['sessions','rate', 'rates','tab'],
+    props: ['sessions','current', 'rates','tab'],
     data() {
         return {
             rates: this.rates
@@ -93,7 +93,7 @@ export default defineComponent({
         AppLayout,
         Head,
         Link,
-        // UpdateRate
+        UpdateRate
     },
 })
 </script>

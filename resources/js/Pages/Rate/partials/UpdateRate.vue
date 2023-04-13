@@ -1,5 +1,5 @@
 <template>
-    <jet-form-section @submitted="RegisterRate">
+    <jet-form-section @submitted="UpdateRate">
       <template #title>
         <h5>نرخ ارز رایج در معاملات</h5>
       </template>
@@ -27,7 +27,7 @@
   
       <template #actions>
         <jet-action-message :on="form.recentlySuccessful">
-          ذخیره سازی نرخ مورد نظر موفقانه صورت گرفت.
+           ویرایش نرخ مورد نظر موفقانه صورت گرفت.
         </jet-action-message>
         <button
           type="submit"
@@ -64,18 +64,18 @@
       return {
         form: this.$inertia.form({
           _method: "post",
+          id: this.rate.id,
           rate: this.rate.rate,
         }),
       };
     },
   
     methods: {
-      RegisterRate() {
-        this.form.post(route("rate.store"), {
+      UpdateRate() {
+        this.form.post(route("rate.update"), {
           errorBag: "goods",
           preserveScroll: true,
           onSuccess: () => {
-            this.form.reset()
           },
         });
       },

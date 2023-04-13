@@ -14,10 +14,10 @@ class RateController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($tab = 'create')
     {
         $rates = Rate::all();
-        return Inertia::render('Rate/Show',['rates'=>$rates, 'tab'=> 'create']);
+        return Inertia::render('Rate/Show',['rates'=>$rates, 'tab'=> $tab]);
     }
 
     /**
@@ -68,9 +68,8 @@ class RateController extends Controller
      */
     public function edit(Rate $rate)
     {
-        return $rate;
         $rates = Rate::all();
-        return Inertia::render('Rate/Show',[
+        return Inertia::render('Rate/partials/ShowRate',[
             'rates'=>$rates,
             'tab'=> 'create',
             'current'=> $rate
@@ -84,9 +83,12 @@ class RateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function updateRate(Request $request)
     {
-        //
+        $rate = Rate::find($request->input('id'));
+        $rate->rate = $request->input('rate');
+        $rate->save();
+        return $this->index('list');
     }
 
     /**
