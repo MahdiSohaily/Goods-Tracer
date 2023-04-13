@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('goods', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->string('serial');
             $table->integer("price");
             $table->float("weigth",6,2);

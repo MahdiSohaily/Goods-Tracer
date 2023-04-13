@@ -11,17 +11,6 @@
     <template #form>
       <div class="row pb-2">
         <div class="col-md-6">
-          <jet-label for="name" value="نام جنس" />
-          <jet-input
-            id="name"
-            type="text"
-            class="mt-1 form-control"
-            v-model="form.name"
-            autocomplete="name"
-          />
-          <jet-input-error :message="form.errors.name" class="mt-2" />
-        </div>
-        <div class="col-md-6">
           <jet-label for="serial" value="سریال نمبر" />
           <jet-input
             id="serial"
@@ -32,9 +21,7 @@
           />
           <jet-input-error :message="form.errors.serial" class="mt-2" />
         </div>
-      </div>
-      <div class="row pb-2">
-        <div class="col-md-4">
+        <div class="col-md-6">
           <jet-label for="price" value="قیمت" />
           <jet-input
             id="price"
@@ -45,7 +32,10 @@
           />
           <jet-input-error :message="form.errors.price" class="mt-2" />
         </div>
-        <div class="col-md-4">
+      </div>
+      <div class="row pb-2">
+      
+        <div class="col-md-6">
           <jet-label for="weight" value="وزن" />
           <jet-input
             id="weight"
@@ -56,7 +46,7 @@
           />
           <jet-input-error :message="form.errors.weight" class="mt-2" />
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
           <jet-label for="dollar" value="نرخ تبادله ارز" />
           <jet-input
             id="dollar"
