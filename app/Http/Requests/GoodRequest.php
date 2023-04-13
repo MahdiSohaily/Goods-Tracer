@@ -24,7 +24,6 @@ class GoodRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['bail', ' required', 'regex:/^[\pL\s\-]+$/u', 'min:3', 'max:50'],
             'serial' => ['bail', ' required', 'regex:/^[a-zA-Z0-9_.-]*$/', 'min:3', 'max:50'],
             'price' => ['bail', 'required', 'numeric', 'min:1'],
             'weight' => ['bail', 'required', 'numeric', 'min:1'],

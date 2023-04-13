@@ -69,7 +69,6 @@ class GoodController extends Controller
     // utility function inorder to prevent duplicate code
     public function setup(GoodRequest $request, Good $good)
     {
-        $good->name = $request->input('name');
         $good->serial = $request->input('serial');
         $good->price = $request->input('price');
         $good->weigth = $request->input('weight');
