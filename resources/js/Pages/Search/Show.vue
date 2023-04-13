@@ -6,11 +6,18 @@
                     <div class="card-header card-header-tabs card-header-warning">
                         <div class="nav-tabs-navigation">
                             <div class="nav-tabs-wrapper">
-                                <div class="submitSearch">
-                                    <input id="search" class="mt-1 form-control" ref="focused"
-                                        placeholder="بارکد جنس مورد نظر را وارد کنید" @keyup="submit" v-model="serial" />
-                                    <input :checked="this.mode" type="checkbox" name="mode" id="mode" v-model="this.mode">
-                                    <label class="text-white">جستجوی پیشرفته</label>
+                                <div class="row pb-2">
+                                    <div class="col-md-6">
+                                        <jet-label for="serial" value="سریال نمبر" />
+                                        <input id="search" class="mt-1 form-control" ref="focused"
+                                            placeholder="بارکد جنس مورد نظر را وارد کنید" @keyup="submit"
+                                            v-model="serial" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input :checked="this.mode" type="checkbox" name="mode" id="mode"
+                                            v-model="this.mode">
+                                        <label class="text-white">جستجوی پیشرفته</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -28,8 +35,8 @@
                                                 <th>سریال نمبر</th>
                                                 <th>قیمت</th>
                                                 <th v-for="(item, index) in rates" v-bind:key="index"
-                                                v-bind:style="{ backgroundColor: colors[index] }">
-                                                    <span> {{ item.rate}}</span>
+                                                    v-bind:style="{ backgroundColor: colors[index] }">
+                                                    <span> {{ item.rate }}</span>
                                                 </th>
                                                 <th>وزن</th>
                                                 <th>نرخ ارز</th>
@@ -96,7 +103,7 @@ export default defineComponent({
             goods: null,
             serial: 857583,
             mode: true,
-            colors: ['aqua','#8bb63a','#b68f3a','#b63a95','#3a86b6']
+            colors: ['aqua', '#8bb63a', '#b68f3a', '#b63a95', '#3a86b6']
         }
     },
 
