@@ -5,7 +5,7 @@
       </template>
   
       <template #description>
-        <small> برای درج نمودن نرخ ارز در سیستم فورم ذیل را به دقت پر نمایید.</small>
+        <small> برای  ویرایش نرخ ارز در سیستم فورم ذیل را به دقت پر نمایید.</small>
       </template>
   
       <template #form>
@@ -58,13 +58,13 @@
       JetLabel,
     },
   
-    props: [],
+    props: ["rate"],
   
     data() {
       return {
         form: this.$inertia.form({
           _method: "post",
-          rate: null,
+          rate: this.rate.rate,
         }),
       };
     },
