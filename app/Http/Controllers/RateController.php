@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Rate;
+use Illuminate\Support\Facades\DB;
 
 class RateController extends Controller
 {
@@ -65,9 +66,15 @@ class RateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Rate $rate)
     {
-        return $id;
+        return $rate;
+        $rates = Rate::all();
+        return Inertia::render('Rate/Show',[
+            'rates'=>$rates,
+            'tab'=> 'create',
+            'current'=> $rate
+        ]);
     }
 
     /**
