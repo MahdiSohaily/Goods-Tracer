@@ -7,13 +7,12 @@
                         <div class="nav-tabs-navigation">
                             <div class="nav-tabs-wrapper">
                                 <div class="row pb-2">
-                                    <div class="col-md-6">
-                                        <jet-label for="serial" value="سریال نمبر" />
-                                        <input id="search" class="mt-1 form-control" ref="focused"
-                                            placeholder="بارکد جنس مورد نظر را وارد کنید" @keyup="submit"
+                                    <div class="col-md-12">
+                                        <label class="text-white">سریال نمبر</label>
+                                        <input id="search" class="mt-1 form-control" ref="focused" @keyup="submit"
                                             v-model="serial" />
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-12 mt-1">
                                         <input :checked="this.mode" type="checkbox" name="mode" id="mode"
                                             v-model="this.mode">
                                         <label class="text-white">جستجوی پیشرفته</label>
