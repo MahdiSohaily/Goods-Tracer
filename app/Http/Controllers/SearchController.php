@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Good;
+use Illuminate\Support\Facades\DB;
 use Inertia\Inertia;
+use App\Models\Rate;
 
 class SearchController extends Controller
 {
@@ -13,12 +14,13 @@ class SearchController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($goods = [])
     {
-        $goods = Good::all();
+        $rates = Rate::all();
 
         return Inertia::render('Search/Show', [
-            'goods' => null,
+            'rates' => $rates,
+            'goods' => $goods
         ]);
     }
 
@@ -40,7 +42,18 @@ class SearchController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $supermode = $request->input('supermode');
+        $serial = $request->input('serial');
+        if ($supermode) {
+            $goods = DB::table('goods')
+        ->where('serial', 'like', '%'.$serial.'%')
+                ->get();
+        } else {
+            $goods = DB::table('goods')
+            ->where('serial', $serial)
+                    ->get();
+        }
+     return $goods;
     }
 
     /**

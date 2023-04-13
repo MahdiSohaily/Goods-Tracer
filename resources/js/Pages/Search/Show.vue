@@ -9,7 +9,7 @@
                                 <div class="submitSearch">
                                     <input id="search" class="mt-1 form-control" ref="focused"
                                         placeholder="بارکد جنس مورد نظر را وارد کنید" @keyup="submit" v-model="serial" />
-                                    <input :checked="this.super" type="checkbox" name="super" id="super">
+                                    <input :checked="this.mode" type="checkbox" name="mode" id="mode" v-model="this.mode">
                                     <label class="text-white">جستجوی پیشرفته</label>
                                 </div>
                             </div>
@@ -24,6 +24,7 @@
                                     </div>
                                     <div class="card-body table-responsive">
                                         <table class="table table-hover">
+                                            {{ goods }}
                                             <thead class="text-primary">
                                                 <th>شماره</th>
                                                 <th>اسم</th>
@@ -102,12 +103,13 @@ import axios from 'axios';
 
 export default defineComponent({
 
-    props: ['sessions', 'goods', 'categories', 'unites'],
+    props: ['sessions', 'goods', 'rates'],
     data() {
         return {
             goods: this.goods,
             serial: null,
-            super: true
+            mode: false,
+            colors: []
         }
     },
 
@@ -122,31 +124,42 @@ export default defineComponent({
                 clearTimeout(this.timer);
                 this.timer = null;
             }
-            this.timer = setTimeout(() => {
+            this.timer = setTimeout(async () => {
                 if (this.serial.length > 3) {
-
+                    let result = await axios.post((route("search.store")), {
+                        'supermode': this.mode,
+                        'serial': this.serial
+                    })
+                        .then(response => {
+                            return (response.data);
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+                        this.goods =(result);
                 }
             }, 800);
 
         },
-        sendPattern() {
-            axios.post((route("rate.store")), {
-                firstName: 'Fred',
-                lastName: 'Flintstone'
-            })
-                .then(function (response) {
-                    console.log(response);
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
+        sendPattern(serial, supermode = false, goods) {
+
         },
         getFocuse() {
             this.$refs.focused.focus();
+        },
+        setColors(alpha = 1) {
+            for (let rate in this.rates) {
+                let r = Math.floor(Math.random() * 255)
+                let g = Math.floor(Math.random() * 255)
+                let b = Math.floor(Math.random() * 255)
+                let a = alpha
+                this.colors.push(`rgba(${r},${g},${b},${a})`);
+            }
         }
     },
     mounted() {
         this.getFocuse();
+        this.setColors();
     }
 })
 </script>
