@@ -14,7 +14,7 @@
                                     </div>
                                     <div class="col-md-12 mt-1">
                                         <input :checked="this.mode" type="checkbox" name="mode" id="mode"
-                                            v-model="this.mode">
+                                            v-model="this.mode" @click="submit">
                                         <label class="text-white">جستجوی پیشرفته</label>
                                     </div>
                                 </div>
@@ -38,18 +38,19 @@
                                                     <span> {{ item.rate }}</span>
                                                 </th>
                                                 <th>وزن</th>
-                                                <th>نرخ ارز</th>
                                             </thead>
                                             <tbody>
                                                 <tr v-for="(good, index) in goods" v-bind:key="index">
-                                                    <td>{{ good.serial }}</td>
+                                                    <td>
+                                                        <span></span>
+                                                        {{ good.serial }}
+                                                    </td>
                                                     <td>{{ good.price }}</td>
                                                     <th v-for="(item, index) in rates" v-bind:key="index"
                                                         v-bind:style="{ backgroundColor: colors[index] }">
                                                         <span> {{ item.rate * good.price }}</span>
                                                     </th>
                                                     <td>{{ good.weigth }}</td>
-                                                    <td>{{ good.dollarRate }}</td>
                                                 </tr>
                                             </tbody>
                                         </table>
