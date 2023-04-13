@@ -24,7 +24,7 @@
                                     </div>
                                     <div class="card-body table-responsive">
                                         <table class="table table-hover">
-                                            <thead class="text-primary">
+                                            <thead class="">
                                                 <th>سریال نمبر</th>
                                                 <th>قیمت</th>
                                                 <th v-for="(item, index) in rates" v-bind:key="index"

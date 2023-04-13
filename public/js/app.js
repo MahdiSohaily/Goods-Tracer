@@ -27593,7 +27593,7 @@ var _hoisted_16 = {
   "class": "table table-hover"
 };
 var _hoisted_17 = {
-  "class": "text-primary"
+  "class": ""
 };
 
 var _hoisted_18 = /*#__PURE__*/_withScopeId(function () {
