@@ -24,22 +24,25 @@
                                     </div>
                                     <div class="card-body table-responsive">
                                         <table class="table table-hover">
-                                            {{ goods }}
                                             <thead class="text-primary">
-                                                <th>شماره</th>
-                                                <th>اسم</th>
                                                 <th>سریال نمبر</th>
                                                 <th>قیمت</th>
+                                                <th v-for="(item, index) in rates" v-bind:key="index"
+                                                v-bind:style="{ backgroundColor: colors[index] }">
+                                                    <span> {{ item.rate}}</span>
+                                                </th>
                                                 <th>وزن</th>
                                                 <th>نرخ ارز</th>
                                                 <th>عملیات</th>
                                             </thead>
                                             <tbody>
                                                 <tr v-for="(good, index) in goods" v-bind:key="index">
-                                                    <td>{{ good.id }}</td>
-                                                    <td>{{ good.name }}</td>
                                                     <td>{{ good.serial }}</td>
                                                     <td>{{ good.price }}</td>
+                                                    <th v-for="(item, index) in rates" v-bind:key="index"
+                                                        v-bind:style="{ backgroundColor: colors[index] }">
+                                                        <span> {{ item.rate * good.price }}</span>
+                                                    </th>
                                                     <td>{{ good.weigth }}</td>
                                                     <td>{{ good.dollarRate }}</td>
                                                     <td class="td-actions text-right">
@@ -72,7 +75,7 @@
 </template>
 <style scoped>
 .submitSearch {
-    width: 600px;
+    max-width: 600px;
     margin-inline: auto;
 }
 
@@ -103,13 +106,13 @@ import axios from 'axios';
 
 export default defineComponent({
 
-    props: ['sessions', 'goods', 'rates'],
+    props: ['sessions', 'rates'],
     data() {
         return {
-            goods: this.goods,
+            goods: null,
             serial: null,
             mode: false,
-            colors: []
+            colors: ['aqua','#8bb63a','#b68f3a','#b63a95','#3a86b6']
         }
     },
 
@@ -136,30 +139,22 @@ export default defineComponent({
                         .catch(function (error) {
                             console.log(error);
                         });
-                        this.goods =(result);
+                    this.setData(result);
                 }
             }, 800);
 
         },
-        sendPattern(serial, supermode = false, goods) {
-
-        },
+        setData(result) {
+            this.goods = result;
+            console.log(this.goods);
+        }
+        ,
         getFocuse() {
             this.$refs.focused.focus();
         },
-        setColors(alpha = 1) {
-            for (let rate in this.rates) {
-                let r = Math.floor(Math.random() * 255)
-                let g = Math.floor(Math.random() * 255)
-                let b = Math.floor(Math.random() * 255)
-                let a = alpha
-                this.colors.push(`rgba(${r},${g},${b},${a})`);
-            }
-        }
     },
     mounted() {
         this.getFocuse();
-        this.setColors();
     }
 })
 </script>
