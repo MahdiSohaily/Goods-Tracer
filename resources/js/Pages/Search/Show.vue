@@ -33,7 +33,6 @@
                                                 </th>
                                                 <th>وزن</th>
                                                 <th>نرخ ارز</th>
-                                                <th>عملیات</th>
                                             </thead>
                                             <tbody>
                                                 <tr v-for="(good, index) in goods" v-bind:key="index">
@@ -45,21 +44,6 @@
                                                     </th>
                                                     <td>{{ good.weigth }}</td>
                                                     <td>{{ good.dollarRate }}</td>
-                                                    <td class="td-actions text-right">
-                                                        <Link :href="route('good.edit', good)"
-                                                            class="btn btn-primary btn-link btn-sm"
-                                                            data-original-title="Edit Task">
-                                                        <i class="material-icons">edit</i>
-                                                        <div class="ripple-container"></div>
-                                                        </Link>
-                                                        <Link :href="route('deleteGood', good)" rel="tooltip" title=""
-                                                            class="btn btn-danger btn-link btn-sm"
-                                                            data-original-title="Remove" data-toggle="modal"
-                                                            data-target="#myModal">
-                                                        <i class="material-icons">close</i>
-                                                        <div class="ripple-container"></div>
-                                                        </link>
-                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>
