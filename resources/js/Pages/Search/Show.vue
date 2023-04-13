@@ -25,19 +25,17 @@
                         <div class="tab-content">
                             <div class="tab-pane active" id="profile">
                                 <div class="card">
-                                    <div class="card-header card-header-primary">
-                                        <h4 class="card-title">اجناس موجود با سریال نمبر وارد شده</h4>
-                                    </div>
                                     <div class="card-body table-responsive">
                                         <table class="table table-hover">
                                             <thead class="">
                                                 <th>سریال نمبر</th>
                                                 <th>قیمت</th>
+                                                <th>وزن</th>
                                                 <th v-for="(item, index) in rates" v-bind:key="index"
                                                     v-bind:style="{ backgroundColor: colors[index] }">
                                                     <span> {{ item.rate }}</span>
                                                 </th>
-                                                <th>وزن</th>
+                                                
                                             </thead>
                                             <tbody>
                                                 <tr v-for="(good, index) in goods" v-bind:key="index">
@@ -46,11 +44,11 @@
                                                         {{ good.serial }}
                                                     </td>
                                                     <td>{{ good.price }}</td>
+                                                    <td>{{ good.weigth }}</td>
                                                     <th v-for="(item, index) in rates" v-bind:key="index"
                                                         v-bind:style="{ backgroundColor: colors[index] }">
                                                         <span> {{ item.rate * good.price }}</span>
                                                     </th>
-                                                    <td>{{ good.weigth }}</td>
                                                 </tr>
                                             </tbody>
                                         </table>
