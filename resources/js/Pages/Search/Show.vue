@@ -28,9 +28,9 @@
                                         </div>
                                         <table class="table table-hover">
                                             <thead class="">
-                                                <th>سریال نمبر</th>
-                                                <th>قیمت</th>
-                                                <th>وزن</th>
+                                                <th class="text-center prime-bg">سریال نمبر</th>
+                                                <th class="text-center prime-bg">قیمت</th>
+                                                <th class="text-center prime-bg">وزن</th>
                                                 <th v-for="(item, index) in rates" v-bind:key="index"
                                                     v-bind:style="{ backgroundColor: colors[index] }">
                                                     <span> {{ item.rate }}</span>
@@ -39,12 +39,9 @@
                                             </thead>
                                             <tbody>
                                                 <tr v-for="(good, index) in goods" v-bind:key="index">
-                                                    <td>
-                                                        <span></span>
-                                                        {{ good.serial }}
-                                                    </td>
-                                                    <td>{{ good.price }}</td>
-                                                    <td>{{ good.weigth }}</td>
+                                                    <td class="prime-bg">{{ good.serial }}</td>
+                                                    <td class="prime-bg">{{ good.price }}</td>
+                                                    <td class="prime-bg">{{ good.weigth }}</td>
                                                     <th v-for="(item, index) in rates" v-bind:key="index"
                                                         v-bind:style="{ backgroundColor: colors[index] }">
                                                         <span> {{ item.rate * good.price }}</span>
@@ -84,6 +81,10 @@ input {
 .pointer {
     padding-inline: 0.5rem;
     cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+.prime-bg {
+    background-color: #04e989;
 }
 </style>
 
@@ -101,7 +102,7 @@ export default defineComponent({
             goods: null,
             serial: 857583,
             mode: true,
-            colors: ['aqua', '#8bb63a', '#b68f3a', '#b63a95', '#3a86b6']
+            colors: ['#8bb63a','aqua', '#b68f3a', '#b63a95', '#3a86b6']
         }
     },
 
