@@ -130,7 +130,7 @@
   import axios from "axios";
   
   export default defineComponent({
-    props: ["sessions", "rates"],
+    props: ["sessions", "rates","goods"],
     data() {
       return {
         goods: null,
@@ -146,49 +146,7 @@
       Link,
     },
     methods: {
-      // The method fiers on key up and sen serial number for check
-      submit() {
-        if (this.timer) {
-          clearTimeout(this.timer);
-          this.timer = null;
-        }
-        this.timer = setTimeout(async () => {
-          if (this.serial.length > 3) {
-            let result = await axios
-              .post(route("search.store"), {
-                supermode: this.mode,
-                serial: this.serial,
-              })
-              .then((response) => {
-                return response.data;
-              })
-              .catch(function (error) {
-                console.log(error);
-              });
-            this.setData(result);
-          }
-        }, 800);
-      },
-  
-      // An async function for checking if dollar rate exict for an specific good
-      async check(id) {
-        let data = await axios
-          .post(route("check"), {
-            id,
-          })
-          .then((response) => {
-            console.log(response.data);
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-        this.setData(data);
-      },
-  
-      // Helper function to sync retrived data from database with local data
-      setData(result) {
-        this.goods = result;
-      },
+      
     },
     mounted() {
       this.submit();
