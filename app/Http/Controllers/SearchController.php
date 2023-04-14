@@ -66,11 +66,10 @@ class SearchController extends Controller
      */
     public function show($id)
     {
-        return 'here we are';
         $rates = Rate::all();
         $good = Good::find($id);
 
-        return Inertia::render('Search/Show', [
+        return Inertia::render('Search/ShowDetails', [
             'rates' => $rates,
             'goods' => $goods,
         ]);
