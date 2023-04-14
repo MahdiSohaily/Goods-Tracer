@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Inertia\Inertia;
 use App\Models\Rate;
+use App\Models\Good;
 
 class SearchController extends Controller
 {
