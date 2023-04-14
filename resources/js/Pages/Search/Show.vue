@@ -35,7 +35,7 @@
                         v-model="this.mode"
                         @click="submit"
                       />
-                      <label for="mode" class="pointer">جستجوی پیشرفته</label>
+                      <label for="mode" class="pointer"  @click="submit">جستجوی پیشرفته</label>
                     </div>
                     <table class="table table-hover">
                       <thead class="">
