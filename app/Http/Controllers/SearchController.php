@@ -22,7 +22,7 @@ class SearchController extends Controller
         return Inertia::render('Search/Show', [
             'rates' => $rates,
             'goods' => $goods,
-            'mode' => 'regular',
+            'searchMode' => 'regular',
         ]);
     }
 
@@ -84,7 +84,7 @@ class SearchController extends Controller
         return Inertia::render('Search/Show', [
             'rates' => $rates,
             'goods' => $goods,
-            'mode'=> 'super'
+            'searchMode'=> 'super'
         ]);
     }
 

@@ -22,6 +22,7 @@
             </div>
           </div>
           <div class="card-body">
+            {{ searchMode }}
             <div class="tab-content">
               <div class="tab-pane active" id="profile">
                 <div class="card">
@@ -119,7 +120,7 @@ import AppLayout from "@/Layouts/AppLayout.vue";
 import axios from "axios";
 
 export default defineComponent({
-  props: ["sessions", "rates"],
+  props: ["sessions", "rates",'searchMode'],
   data() {
     return {
       goods: null,
