@@ -12,11 +12,6 @@
                                         <input id="search" class="mt-1 form-control" ref="focused" @keyup="submit"
                                             v-model="serial" />
                                     </div>
-                                    <div class="col-md-12 mt-1">
-                                        <input :checked="this.mode" type="checkbox" name="mode" id="mode"
-                                            v-model="this.mode" @click="submit">
-                                        <label for="mode" class="text-white pointer">جستجوی پیشرفته</label>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -26,6 +21,11 @@
                             <div class="tab-pane active" id="profile">
                                 <div class="card">
                                     <div class="card-body table-responsive">
+                                        <div class="col-md-12">
+                                            <input :checked="this.mode" type="checkbox" name="mode" id="mode"
+                                                v-model="this.mode" @click="submit">
+                                            <label for="mode" class="pointer">جستجوی پیشرفته</label>
+                                        </div>
                                         <table class="table table-hover">
                                             <thead class="">
                                                 <th>سریال نمبر</th>
@@ -35,7 +35,7 @@
                                                     v-bind:style="{ backgroundColor: colors[index] }">
                                                     <span> {{ item.rate }}</span>
                                                 </th>
-                                                
+
                                             </thead>
                                             <tbody>
                                                 <tr v-for="(good, index) in goods" v-bind:key="index">
@@ -63,11 +63,6 @@
     </app-layout>
 </template>
 <style scoped>
-.submitSearch {
-    max-width: 600px;
-    margin-inline: auto;
-}
-
 ::-webkit-input-placeholder {
     /* Edge */
     color: white;
@@ -85,7 +80,9 @@
 input {
     color: white;
 }
+
 .pointer {
+    padding-inline: 0.5rem;
     cursor: pointer;
 }
 </style>
