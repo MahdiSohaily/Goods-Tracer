@@ -138,7 +138,34 @@
       Link,
     },
     methods: {
-      
+      // The method fiers on key up and sen serial number for check
+    submit() {
+      if (this.timer) {
+        clearTimeout(this.timer);
+        this.timer = null;
+      }
+      this.timer = setTimeout(async () => {
+        if (this.serial.length > 3) {
+          let result = await axios
+            .post(route("search.store"), {
+              supermode: this.mode,
+              serial: this.serial,
+            })
+            .then((response) => {
+              return response.data;
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+          this.setData(result);
+        }
+      }, 800);
+    },
+
+    // Helper function to sync retrived data from database with local data
+    setData(result) {
+      this.goods = result;
+    },
     },
     mounted() {
       this.submit();
