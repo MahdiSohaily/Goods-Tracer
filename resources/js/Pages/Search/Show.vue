@@ -39,7 +39,10 @@
                                             </thead>
                                             <tbody>
                                                 <tr v-for="(good, index) in goods" v-bind:key="index">
-                                                    <td class="prime-bg">{{ good.serial }}</td>
+                                                    <td class="prime-bg">
+                                                        <i class="material-icons">dashboard</i>
+                                                        {{ good.serial }}
+                                                    </td>
                                                     <td class="prime-bg">{{ good.price }}</td>
                                                     <td class="prime-bg">{{ good.weigth }}</td>
                                                     <th v-for="(item, index) in rates" v-bind:key="index"
