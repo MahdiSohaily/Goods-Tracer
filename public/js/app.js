@@ -23118,9 +23118,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context2.prev = _context2.next) {
               case 0:
                 _context2.next = 2;
-                return axios__WEBPACK_IMPORTED_MODULE_4___default().post(route("check"), {
-                  id: id
-                }).then(function (response) {
+                return axios__WEBPACK_IMPORTED_MODULE_4___default().get(route("search.show", id)).then(function (response) {
                   console.log(response.data);
                 })["catch"](function (error) {
                   console.log(error);

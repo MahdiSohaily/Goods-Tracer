@@ -173,9 +173,7 @@ export default defineComponent({
     // An async function for checking if dollar rate exict for an specific good
     async check(id) {
       let data = await axios
-        .post(route("check"), {
-          id,
-        })
+        .get(route("search.show",id))
         .then((response) => {
           console.log(response.data);
         })

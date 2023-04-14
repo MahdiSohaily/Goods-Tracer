@@ -66,6 +66,7 @@ class SearchController extends Controller
      */
     public function show($id)
     {
+        return 'here we are';
         $rates = Rate::all();
         $good = Good::find($id);
 
