@@ -23139,11 +23139,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee2);
       }))();
     },
+    // Helper function to sync retrived data from database with local data
     setData: function setData(result) {
       this.goods = result;
-    },
-    getFocuse: function getFocuse() {
-      this.$refs.focused.focus();
     }
   },
   mounted: function mounted() {

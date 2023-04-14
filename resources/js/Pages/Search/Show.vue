@@ -158,12 +158,11 @@ export default defineComponent({
                 });
             this.setData(result);
         },
+
+        // Helper function to sync retrived data from database with local data
         setData(result) {
             this.goods = result;
-        },
-        getFocuse() {
-            this.$refs.focused.focus();
-        },
+        }
     },
     mounted() {
         this.getFocuse();
