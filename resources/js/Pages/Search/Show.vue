@@ -15,7 +15,7 @@
                                     <div class="col-md-12 mt-1">
                                         <input :checked="this.mode" type="checkbox" name="mode" id="mode"
                                             v-model="this.mode" @click="submit">
-                                        <label class="text-white">جستجوی پیشرفته</label>
+                                        <label for="mode" class="text-white">جستجوی پیشرفته</label>
                                     </div>
                                 </div>
                             </div>
