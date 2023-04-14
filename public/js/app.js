@@ -23049,7 +23049,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,vue__WEBPACK_IMPORTED_MODULE_1__.defineComponent)({
-  props: ["sessions", "rates", "searchMode"],
+  props: ["sessions", "rates"],
   data: function data() {
     return {
       goods: null,

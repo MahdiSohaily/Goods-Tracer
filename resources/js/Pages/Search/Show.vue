@@ -130,7 +130,7 @@ import AppLayout from "@/Layouts/AppLayout.vue";
 import axios from "axios";
 
 export default defineComponent({
-  props: ["sessions", "rates", "searchMode"],
+  props: ["sessions", "rates"],
   data() {
     return {
       goods: null,

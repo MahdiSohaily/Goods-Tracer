@@ -66,7 +66,13 @@ class SearchController extends Controller
      */
     public function show($id)
     {
-        //
+        $rates = Rate::all();
+        $good = Good::find($id);
+
+        return Inertia::render('Search/Show', [
+            'rates' => $rates,
+            'goods' => $goods,
+        ]);
     }
 
     /**
