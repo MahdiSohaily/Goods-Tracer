@@ -54,24 +54,36 @@
                         </th>
                       </thead>
                       <tbody>
-                        <tr v-for="(good, index) in goods" v-bind:key="index">
-                          <td class="prime-bg">
-                            <Link :href="route('search.check', good.id)">
-                              <i class="material-icons pointer">help</i>
-                            </Link>
+                        <div v-for="(good, index) in goods" v-bind:key="index">
+                          <tr>
+                            <td class="prime-bg">
+                              <Link :href="route('search.check', good.id)">
+                                <i class="material-icons pointer">help</i>
+                              </Link>
 
-                            {{ good.serial }}
-                          </td>
-                          <td class="prime-bg">{{ good.price }}</td>
-                          <td class="prime-bg">{{ good.weigth }}</td>
-                          <td
-                            v-for="(item, index) in rates"
-                            v-bind:key="index"
-                            v-bind:style="{ backgroundColor: colors[index] }"
-                          >
-                            <span> {{ item.rate * good.price }}</span>
-                          </td>
-                        </tr>
+                              {{ good.serial }}
+                            </td>
+                            <td class="prime-bg">{{ good.price }}</td>
+                            <td class="prime-bg">{{ good.weigth }}</td>
+                            <td
+                              v-for="(item, index) in rates"
+                              v-bind:key="index"
+                              v-bind:style="{ backgroundColor: colors[index] }"
+                            >
+                              <span> {{ item.rate * good.price }}</span>
+                            </td>
+                          </tr>
+                          <tr v-if="searchMode ==='super'">
+                            <td colspan="4"></td>
+                            <td
+                              v-for="(item, index) in rates"
+                              v-bind:key="index"
+                              v-bind:style="{ backgroundColor: colors[index] }"
+                            >
+                              <span> {{ item.rate * good.price * 1.5 }}</span>
+                            </td>
+                          </tr>
+                        </div>
                       </tbody>
                     </table>
                   </div>
