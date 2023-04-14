@@ -1,8 +1,86 @@
 <template>
-    <app-layout title="2جستجوی اجناس" :position="$page.props.user.position">
+    <app-layout title="جستجوی اجناس" :position="$page.props.user.position">
       <div class="content">
         <div class="container-fluid">
-          here we are
+          <div class="card">
+            <div class="card-header card-header-tabs card-header-warning">
+              <div class="nav-tabs-navigation">
+                <div class="nav-tabs-wrapper">
+                  <div class="row pb-2">
+                    <div class="col-md-12">
+                      <label class="text-white">سریال نمبر</label>
+                      <input
+                        id="search"
+                        class="mt-1 form-control"
+                        v-model="serial"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="tab-content">
+                <div class="tab-pane active" id="profile">
+                  <div class="card">
+                    <div class="card-body table-responsive">
+                      <div class="col-md-12">
+                        <input
+                          :checked="this.mode"
+                          type="checkbox"
+                          name="mode"
+                          id="mode"
+                          v-model="this.mode"
+                          @click="submit"
+                        />
+                        <label for="mode" class="pointer" @click="submit">جستجوی پیشرفته </label>
+                      </div>
+                      <table class="table table-hover">
+                        <thead class="">
+                          <th class="text-center prime-bg">سریال نمبر</th>
+                          <th class="text-center prime-bg">قیمت</th>
+                          <th class="text-center prime-bg">وزن</th>
+                          <th
+                            v-for="(item, index) in rates"
+                            v-bind:key="index"
+                            v-bind:style="{ backgroundColor: colors[index] }"
+                          >
+                            <span> {{ item.rate }}</span>
+                          </th>
+                        </thead>
+                        <tbody>
+                          <tr
+                            class="col-12"
+                            v-for="(good, index) in goods"
+                            v-bind:key="index"
+                            style="background-color: blue"
+                          >
+                            <td class="prime-bg">
+                              <i
+                                class="material-icons pointer"
+                                @click="check(good.id)"
+                                >help</i
+                              >
+                              {{ good.serial }}
+                            </td>
+                            <td class="prime-bg">{{ good.price }}</td>
+                            <td class="prime-bg">{{ good.weigth }}</td>
+                            <td
+                              v-for="(item, index) in rates"
+                              v-bind:key="index"
+                              v-bind:style="{ backgroundColor: colors[index] }"
+                            >
+                              <span> {{ item.rate * good.price }}</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </app-layout>

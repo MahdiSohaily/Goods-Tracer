@@ -65,7 +65,7 @@ class SearchController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
+    { 
         $rates = Rate::all();
         $good = Good::find($id);
 
