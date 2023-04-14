@@ -77,6 +77,7 @@ class SearchController extends Controller
      */
     public function check($id)
     {
+        echo $id;
         $rates = Rate::all();
         $goods = Good::find($id);
 

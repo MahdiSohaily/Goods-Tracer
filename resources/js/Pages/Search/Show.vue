@@ -177,7 +177,7 @@ export default defineComponent({
           search: id,
         })
         .then((response) => {
-          return response.data;
+         console.log(response.data);
         })
         .catch(function (error) {
           console.log(error);

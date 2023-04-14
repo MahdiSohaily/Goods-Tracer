@@ -66,6 +66,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::controller(SearchController::class)->group(function () {
         Route::get('/search', 'index')->name('search'); /*Showing Search Main Pages*/
         Route::post('/search', 'store')->name('search.store'); /* Registering New search */
-        Route::get('/search/{search}', 'check')->name('search.check'); /* edit regitered Search */
+        Route::post('/search/check', 'check')->name('search.check'); /* edit regitered Search */
     });
 });
