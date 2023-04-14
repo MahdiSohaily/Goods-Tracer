@@ -79,12 +79,16 @@ class SearchController extends Controller
     {
         $rates = Rate::all();
         $goods = Good::find($id);
-        return $goods; 
+
+        $searchMode = 'regular';
+        if ($goods->dollarRate) {
+            $searchMode = 'super';
+        }
 
         return Inertia::render('Search/Show', [
             'rates' => $rates,
             'goods' => $goods,
-            'searchMode'=> 'super'
+            'searchMode'=>  $searchMode
         ]);
     }
 
