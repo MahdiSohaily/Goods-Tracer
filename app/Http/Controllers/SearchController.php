@@ -68,10 +68,9 @@ class SearchController extends Controller
     { 
         $rates = Rate::all();
         $good = Good::find($id);
-
         return Inertia::render('Search/partials/ShowDetails', [
             'rates' => $rates,
-            'goods' => $good,
+            'result' => $good,
         ]);
     }
 
