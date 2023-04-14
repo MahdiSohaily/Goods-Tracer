@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <Head :title="title" />
+    <Head :title="title" :a="a"/>
     <div
       class="sidebar"
       data-color="purple"
