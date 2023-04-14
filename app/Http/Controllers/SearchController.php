@@ -85,11 +85,7 @@ class SearchController extends Controller
             $searchMode = 'super';
         }
 
-        return Inertia::render('Search/Show', [
-            'rates' => $rates,
-            'goods' => $goods,
-            'searchMode'=>  $searchMode
-        ]);
+        return $goods;
     }
 
     /**

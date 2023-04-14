@@ -23119,7 +23119,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context2.next = 2;
                 return axios__WEBPACK_IMPORTED_MODULE_4___default().post(route("search.check"), {
-                  id: id
+                  search: id
                 }).then(function (response) {
                   return response.data;
                 })["catch"](function (error) {
@@ -23145,7 +23145,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
   },
   mounted: function mounted() {
-    this.getFocuse();
     this.submit();
   }
 }));
@@ -27647,10 +27646,11 @@ var _hoisted_21 = /*#__PURE__*/_withScopeId(function () {
 var _hoisted_22 = {
   "class": "prime-bg"
 };
-var _hoisted_23 = {
+var _hoisted_23 = ["onClick"];
+var _hoisted_24 = {
   "class": "prime-bg"
 };
-var _hoisted_24 = {
+var _hoisted_25 = {
   "class": "prime-bg"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -27720,14 +27720,16 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           }
         }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
           "class": "material-icons pointer",
-          onClick: _cache[5] || (_cache[5] = function () {
-            return _ctx.check && _ctx.check.apply(_ctx, arguments);
-          })
-        }, "help"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(good.serial), 1
+          onClick: function onClick($event) {
+            return _ctx.check(good.id);
+          }
+        }, "help", 8
+        /* PROPS */
+        , _hoisted_23), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(good.serial), 1
         /* TEXT */
-        )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(good.price), 1
+        )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(good.price), 1
         /* TEXT */
-        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(good.weigth), 1
+        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(good.weigth), 1
         /* TEXT */
         ), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.rates, function (item, index) {
           return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("td", {
@@ -28070,7 +28072,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n[data-v-e851abea]:-ms-input-placeholder {\r\n    /* Internet Explorer 10-11 */\r\n    color: white;\n}\n[data-v-e851abea]::-moz-placeholder {\r\n    color: white;\n}\n[data-v-e851abea]::placeholder {\r\n    color: white;\n}\ninput[data-v-e851abea] {\r\n    color: white;\n}\n.pointer[data-v-e851abea] {\r\n    padding-inline: 0.5rem;\r\n    cursor: pointer;\r\n    color: rgb(0, 0, 0);\n}\n.prime-bg[data-v-e851abea] {\r\n    background-color: #04e989;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n[data-v-e851abea]:-ms-input-placeholder {\r\n  /* Internet Explorer 10-11 */\r\n  color: white;\n}\n[data-v-e851abea]::-moz-placeholder {\r\n  color: white;\n}\n[data-v-e851abea]::placeholder {\r\n  color: white;\n}\ninput[data-v-e851abea] {\r\n  color: white;\n}\n.pointer[data-v-e851abea] {\r\n  padding-inline: 0.5rem;\r\n  cursor: pointer;\r\n  color: rgb(0, 0, 0);\n}\n.prime-bg[data-v-e851abea] {\r\n  background-color: #04e989;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
