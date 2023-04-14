@@ -147,9 +147,8 @@ export default defineComponent({
         // An async function for checking if dollar rate exict for an specific good
         async check(id) {
             let result = await axios
-                .post(route("search.store"), {
-                    supermode: this.mode,
-                    serial: this.serial,
+                .post(route("search.check"), {
+                    id
                 })
                 .then((response) => {
                     return response.data;
