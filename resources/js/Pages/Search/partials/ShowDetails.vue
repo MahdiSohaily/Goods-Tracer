@@ -12,8 +12,6 @@
                       <input
                         id="search"
                         class="mt-1 form-control"
-                        ref="focused"
-                        @keyup="submit"
                         v-model="serial"
                       />
                     </div>
@@ -22,7 +20,6 @@
               </div>
             </div>
             <div class="card-body">
-              {{ searchMode }}
               <div class="tab-content">
                 <div class="tab-pane active" id="profile">
                   <div class="card">
@@ -36,14 +33,9 @@
                           v-model="this.mode"
                           @click="submit"
                         />
-                        <label for="mode" class="pointer" @click="submit"
-                          >جستجوی پیشرفته</label
-                        >
+                        <label for="mode" class="pointer" @click="submit">جستجوی پیشرفته </label>
                       </div>
                       <table class="table table-hover">
-                        {{
-                          goods
-                        }}
                         <thead class="">
                           <th class="text-center prime-bg">سریال نمبر</th>
                           <th class="text-center prime-bg">قیمت</th>
