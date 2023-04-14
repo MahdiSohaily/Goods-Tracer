@@ -22,7 +22,6 @@
             </div>
           </div>
           <div class="card-body">
-            {{ searchMode }}
             <div class="tab-content">
               <div class="tab-pane active" id="profile">
                 <div class="card">
@@ -41,9 +40,6 @@
                       >
                     </div>
                     <table class="table table-hover">
-                      {{
-                        goods
-                      }}
                       <thead class="">
                         <th class="text-center prime-bg">سریال نمبر</th>
                         <th class="text-center prime-bg">قیمت</th>
