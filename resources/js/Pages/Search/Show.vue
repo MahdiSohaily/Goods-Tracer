@@ -64,13 +64,13 @@
                           </td>
                           <td class="prime-bg">{{ good.price }}</td>
                           <td class="prime-bg">{{ good.weigth }}</td>
-                          <th
+                          <td
                             v-for="(item, index) in rates"
                             v-bind:key="index"
                             v-bind:style="{ backgroundColor: colors[index] }"
                           >
                             <span> {{ item.rate * good.price }}</span>
-                          </th>
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -120,7 +120,7 @@ import AppLayout from "@/Layouts/AppLayout.vue";
 import axios from "axios";
 
 export default defineComponent({
-  props: ["sessions", "rates",'searchMode'],
+  props: ["sessions", "rates", "searchMode"],
   data() {
     return {
       goods: null,
