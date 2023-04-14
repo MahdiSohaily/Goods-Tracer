@@ -60,11 +60,13 @@
                           style="background-color: blue"
                         >
                           <td class="prime-bg">
-                            <i
-                              class="material-icons pointer"
-                              @click="check(good.id)"
-                              >help</i
+                            <Link
+                              class="nav-link"
+                              :href="route('search.show', good.id)"
                             >
+                              <i class="material-icons pointer">help</i>
+                            </Link>
+
                             {{ good.serial }}
                           </td>
                           <td class="prime-bg">{{ good.price }}</td>
@@ -165,20 +167,6 @@ export default defineComponent({
         }
       }, 800);
     },
-
-    // An async function for checking if dollar rate exict for an specific good
-    async check(id) {
-      let data = await axios
-        .get(route("search.show",id))
-        .then((response) => {
-          console.log(response.data);
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-      this.setData(data);
-    },
-
     // Helper function to sync retrived data from database with local data
     setData(result) {
       this.goods = result;
