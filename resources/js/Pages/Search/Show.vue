@@ -172,17 +172,17 @@ export default defineComponent({
 
     // An async function for checking if dollar rate exict for an specific good
     async check(id) {
-      let result = await axios
-        .post(route("search.check"), {
-          search: id,
+      let data = await axios
+        .post(route("check"), {
+          id,
         })
         .then((response) => {
-         console.log(response.data);
+          console.log(response.data);
         })
         .catch(function (error) {
           console.log(error);
         });
-      this.setData(result);
+      this.setData(data);
     },
 
     // Helper function to sync retrived data from database with local data

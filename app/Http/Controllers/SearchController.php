@@ -75,18 +75,10 @@ class SearchController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function check($id)
+    public function check(Request $request)
     {
-        echo $id;
-        $rates = Rate::all();
-        $goods = Good::find($id);
-
-        $searchMode = 'regular';
-        if ($goods->dollarRate) {
-            $searchMode = 'super';
-        }
-
-        return $goods;
+        $id = $request->input('id');
+        $good = null;
     }
 
     /**
