@@ -20,7 +20,8 @@ class SearchController extends Controller
 
         return Inertia::render('Search/Show', [
             'rates' => $rates,
-            'goods' => $goods
+            'goods' => $goods,
+            'mode' => 'regular',
         ]);
     }
 
@@ -73,9 +74,17 @@ class SearchController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function check($id)
     {
-        //
+        $rates = Rate::all();
+        $goods = Good::find($id);
+        return $goods; 
+
+        return Inertia::render('Search/Show', [
+            'rates' => $rates,
+            'goods' => $goods,
+            'mode'=> 'super'
+        ]);
     }
 
     /**

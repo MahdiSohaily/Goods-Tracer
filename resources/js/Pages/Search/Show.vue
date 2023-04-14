@@ -35,7 +35,9 @@
                         v-model="this.mode"
                         @click="submit"
                       />
-                      <label for="mode" class="pointer"  @click="submit">جستجوی پیشرفته</label>
+                      <label for="mode" class="pointer" @click="submit"
+                        >جستجوی پیشرفته</label
+                      >
                     </div>
                     <table class="table table-hover">
                       <thead class="">
@@ -53,10 +55,10 @@
                       <tbody>
                         <tr v-for="(good, index) in goods" v-bind:key="index">
                           <td class="prime-bg">
-                            <Link :href="route('profile')">
+                            <Link :href="route('search.check', good.id)">
                               <i class="material-icons pointer">help</i>
                             </Link>
-                            
+
                             {{ good.serial }}
                           </td>
                           <td class="prime-bg">{{ good.price }}</td>
