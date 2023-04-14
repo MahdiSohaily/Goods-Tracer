@@ -23108,7 +23108,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     },
     setData: function setData(result) {
       this.goods = result;
-      console.log(this.goods);
     },
     getFocuse: function getFocuse() {
       this.$refs.focused.focus();

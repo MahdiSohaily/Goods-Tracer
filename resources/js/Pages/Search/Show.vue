@@ -157,7 +157,6 @@ export default defineComponent({
     },
     setData(result) {
       this.goods = result;
-      console.log(this.goods);
     },
     getFocuse() {
       this.$refs.focused.focus();
