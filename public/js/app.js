@@ -24179,7 +24179,7 @@ var _hoisted_4 = /*#__PURE__*/_withScopeId(function () {
     href: "",
     "class": "simple-text logo-normal"
   }, " مینوی سیستم "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-    "class": "material-icons pointer"
+    "class": "material-icons pointer close"
   }, "close")], -1
   /* HOISTED */
   );
@@ -24262,7 +24262,7 @@ var _hoisted_18 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "navbar-wrapper"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-    "class": "material-icons pointer"
+    "class": "material-icons pointer open"
   }, "menu")], -1
   /* HOISTED */
   );
