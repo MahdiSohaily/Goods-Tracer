@@ -12,16 +12,19 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li :class="title === 'داشبورد' ? 'active' : ''" class="nav-item">
+          <!-- <li :class="title === 'داشبورد' ? 'active' : ''" class="nav-item">
             <Link :as="a" class="nav-link" :href="route('dashboard')">
               <i class="material-icons">dashboard</i>
               <p>داشبورد</p>
             </Link>
-          </li>
-          <li :class="title === 'پروفایل' ? 'active' : ''" class="nav-item">
-            <Link class="nav-link" :href="route('profile')">
-              <i class="material-icons">person</i>
-              <p>پروفایل کاربر</p>
+          </li> -->
+          <li
+            :class="title === 'جستجوی اجناس' ? 'active' : ''"
+            class="nav-item"
+          >
+            <Link class="nav-link" :href="route('search')">
+              <i class="material-icons">youtube_searched_for</i>
+              <p>جستجوی اجناس</p>
             </Link>
           </li>
           <li
@@ -43,13 +46,10 @@
               <p>نرخ تبادل ارز</p>
             </Link>
           </li>
-          <li
-            :class="title === 'جستجوی اجناس' ? 'active' : ''"
-            class="nav-item"
-          >
-            <Link class="nav-link" :href="route('search')">
-              <i class="material-icons">youtube_searched_for</i>
-              <p>جستجوی اجناس</p>
+          <li :class="title === 'پروفایل' ? 'active' : ''" class="nav-item">
+            <Link class="nav-link" :href="route('profile')">
+              <i class="material-icons">person</i>
+              <p>پروفایل کاربر</p>
             </Link>
           </li>
         </ul>
