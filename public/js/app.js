@@ -27779,7 +27779,7 @@ var _hoisted_18 = {
 
 var _hoisted_19 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
-    "class": "prime-bg"
+    "class": "prime-bg-title"
   }, "سریال نمبر", -1
   /* HOISTED */
   );
@@ -27787,7 +27787,7 @@ var _hoisted_19 = /*#__PURE__*/_withScopeId(function () {
 
 var _hoisted_20 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
-    "class": "prime-bg"
+    "class": "prime-bg-title"
   }, "قیمت", -1
   /* HOISTED */
   );
@@ -27795,7 +27795,7 @@ var _hoisted_20 = /*#__PURE__*/_withScopeId(function () {
 
 var _hoisted_21 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
-    "class": "prime-bg"
+    "class": "prime-bg-title"
   }, "وزن", -1
   /* HOISTED */
   );
@@ -27865,7 +27865,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       }, "جستجوی پیشرفته")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", _hoisted_18, [_hoisted_19, _hoisted_20, _hoisted_21, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.rates, function (item, index) {
         return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("th", {
           key: index,
-          "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(item.status)
+          "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(item.status !== 'N' ? item.status : 'prime-bg-title')
         }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.rate), 1
         /* TEXT */
         )], 2
@@ -28520,7 +28520,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n[data-v-e851abea]:-ms-input-placeholder {\r\n  /* Internet Explorer 10-11 */\r\n  color: white;\n}\n[data-v-e851abea]::-moz-placeholder {\r\n  color: white;\n}\n[data-v-e851abea]::placeholder {\r\n  color: white;\n}\ninput[data-v-e851abea] {\r\n  color: white;\n}\n.pointer[data-v-e851abea] {\r\n  padding-inline: 0.5rem;\r\n  cursor: pointer;\r\n  color: rgb(0, 0, 0);\n}\n.prime-bg[data-v-e851abea] {\r\n  background-color: #a5f7db;\n}\n.A[data-v-e851abea] {\r\n  background-color: seagreen;\n}\n.B[data-v-e851abea] {\r\n  background-color: aqua;\n}\n.C[data-v-e851abea] {\r\n  background-color: #b68f3a;\n}\n.D[data-v-e851abea] {\r\n  background-color: #b63a95;\n}\n.E[data-v-e851abea]{\r\n  background-color: #3a86b6;\n}\n.F[data-v-e851abea] {\r\n  background-color: #de6ffa;\n}\n.G[data-v-e851abea] {\r\n  background-color: #fc8ea0;\n}\n.N[data-v-e851abea] {\r\n  background-color: #a5f7db;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n[data-v-e851abea]:-ms-input-placeholder {\r\n  /* Internet Explorer 10-11 */\r\n  color: white;\n}\n[data-v-e851abea]::-moz-placeholder {\r\n  color: white;\n}\n[data-v-e851abea]::placeholder {\r\n  color: white;\n}\ninput[data-v-e851abea] {\r\n  color: white;\n}\n.pointer[data-v-e851abea] {\r\n  padding-inline: 0.5rem;\r\n  cursor: pointer;\r\n  color: rgb(0, 0, 0);\n}\n.prime-bg-title[data-v-e851abea] {\r\n  background-color: #76af9c;\n}\n.prime-bg[data-v-e851abea] {\r\n  background-color: #a5f7db;\n}\n.A[data-v-e851abea] {\r\n  background-color: seagreen;\n}\n.B[data-v-e851abea] {\r\n  background-color: aqua;\n}\n.C[data-v-e851abea] {\r\n  background-color: #b68f3a;\n}\n.D[data-v-e851abea] {\r\n  background-color: #b63a95;\n}\n.E[data-v-e851abea] {\r\n  background-color: #3a86b6;\n}\n.F[data-v-e851abea] {\r\n  background-color: #de6ffa;\n}\n.G[data-v-e851abea] {\r\n  background-color: #fc8ea0;\n}\n.N[data-v-e851abea] {\r\n  background-color: #a5f7db;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

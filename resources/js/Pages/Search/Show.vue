@@ -35,19 +35,24 @@
                         v-model="this.mode"
                         @click="submit"
                       />
-                      <label for="mode" class="pointer card-category" @click="submit"
+                      <label
+                        for="mode"
+                        class="pointer card-category"
+                        @click="submit"
                         >جستجوی پیشرفته</label
                       >
                     </div>
                     <table class="table table-hover">
                       <thead class="">
-                        <th class="prime-bg">سریال نمبر</th>
-                        <th class="prime-bg">قیمت</th>
-                        <th class="prime-bg">وزن</th>
+                        <th class="prime-bg-title">سریال نمبر</th>
+                        <th class="prime-bg-title">قیمت</th>
+                        <th class="prime-bg-title">وزن</th>
                         <th
                           v-for="(item, index) in rates"
                           v-bind:key="index"
-                          :class="item.status"
+                          :class="
+                            item.status !=='N' ? item.status : 'prime-bg-title'
+                          "
                         >
                           <span> {{ item.rate }}</span>
                         </th>
@@ -115,6 +120,9 @@ input {
   color: rgb(0, 0, 0);
 }
 
+.prime-bg-title {
+  background-color: #76af9c;
+}
 .prime-bg {
   background-color: #a5f7db;
 }
@@ -135,7 +143,7 @@ input {
   background-color: #b63a95;
 }
 
-.E{
+.E {
   background-color: #3a86b6;
 }
 
