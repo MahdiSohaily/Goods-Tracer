@@ -27859,7 +27859,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       /* PROPS */
       , _hoisted_16), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelCheckbox, _this.mode]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
         "for": "mode",
-        "class": "pointer",
+        "class": "pointer card-category",
         onClick: _cache[4] || (_cache[4] = function () {
           return _ctx.submit && _ctx.submit.apply(_ctx, arguments);
         })

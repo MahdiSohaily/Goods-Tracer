@@ -35,7 +35,7 @@
                         v-model="this.mode"
                         @click="submit"
                       />
-                      <label for="mode" class="pointer" @click="submit"
+                      <label for="mode" class="pointer card-category" @click="submit"
                         >جستجوی پیشرفته</label
                       >
                     </div>
