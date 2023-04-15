@@ -29,7 +29,6 @@
             id="c.status"
             class="form-control"
             v-model="form.status"
-            required
           >
             <option class="text-center" value="A">A</option>
             <option class="text-center" value="B">B</option>
@@ -84,7 +83,7 @@ export default defineComponent({
       form: this.$inertia.form({
         _method: "post",
         rate: null,
-        status: N,
+        status: 'N',
       }),
     };
   },

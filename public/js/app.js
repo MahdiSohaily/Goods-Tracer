@@ -22910,7 +22910,7 @@ __webpack_require__.r(__webpack_exports__);
       form: this.$inertia.form({
         _method: "post",
         rate: null,
-        status: N
+        status: 'N'
       })
     };
   },
@@ -27350,8 +27350,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         "class": "form-control",
         "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
           return _ctx.form.status = $event;
-        }),
-        required: ""
+        })
       }, _hoisted_12, 512
       /* NEED_PATCH */
       ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, _ctx.form.status]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_input_error, {
