@@ -240,6 +240,9 @@ export default defineComponent({
     close.addEventListener("click", function () {
       sidebar.classList.remove('mk-active');
     });
+    window.addEventListener('resize',()=>{
+      sidebar.classList.remove('mk-active');
+    })
   },
 });
 </script>

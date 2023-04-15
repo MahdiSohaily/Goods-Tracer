@@ -22008,6 +22008,9 @@ __webpack_require__.r(__webpack_exports__);
     close.addEventListener("click", function () {
       sidebar.classList.remove('mk-active');
     });
+    window.addEventListener('resize', function () {
+      sidebar.classList.remove('mk-active');
+    });
   }
 }));
 
