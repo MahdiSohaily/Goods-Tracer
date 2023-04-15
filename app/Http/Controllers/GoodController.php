@@ -71,7 +71,7 @@ class GoodController extends Controller
     {
         $good->serial = $request->input('serial');
         $good->price = $request->input('price');
-        $good->weigth = $request->input('weight');
+        $good->weight = $request->input('weight');
         $good->dollarRate = $request->input('dollar');
     }
 
