@@ -6,7 +6,7 @@
       <div class="sidebar-content">
         <div class="logo">
           <a href="" class="simple-text logo-normal"> مینوی سیستم </a>
-          <i class="material-icons">close</i>
+          <i class="material-icons pointer">close</i>
         </div>
         <div class="sidebar-wrapper">
           <ul class="nav">
@@ -44,7 +44,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <i class="material-icons">menu</i>
+            <i class="material-icons pointer">menu</i>
           </div>
 
           <div class="collapse navbar-collapse justify-content-end">
@@ -91,6 +91,10 @@
   </div>
 </template>
 <style scoped>
+
+.pointer {
+  cursor: pointer;
+}
 .wrapper {
   padding-top: 60px;
 }
@@ -113,14 +117,24 @@
   overflow: hidden;
   z-index: 10000;
 }
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
 
 .nav {
   display: flex;
   flex-direction: column;
 }
 
+.nav li {
+  padding-block: 0.7rem;
+}
 .nav li p{
   display: inline;
+  padding-inline: 0.5rem;
 }
 
 .nav li.active {

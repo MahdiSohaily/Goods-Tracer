@@ -24179,7 +24179,7 @@ var _hoisted_4 = /*#__PURE__*/_withScopeId(function () {
     href: "",
     "class": "simple-text logo-normal"
   }, " مینوی سیستم "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-    "class": "material-icons"
+    "class": "material-icons pointer"
   }, "close")], -1
   /* HOISTED */
   );
@@ -24262,7 +24262,7 @@ var _hoisted_18 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "navbar-wrapper"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-    "class": "material-icons"
+    "class": "material-icons pointer"
   }, "menu")], -1
   /* HOISTED */
   );
@@ -28593,7 +28593,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.wrapper[data-v-5663af57] {\r\n  padding-top: 60px;\n}\n.custom-sidebar[data-v-5663af57] {\r\n  position: fixed !important;\r\n  inset: 0;\r\n  background-color: rgba(0, 0, 0, 0.815) !important;\r\n  overflow: hidden;\r\n  z-index: 10000;\n}\n.sidebar-content[data-v-5663af57] {\r\n  position: absolute !important;\r\n  width: 250px;\r\n  top: 0;\r\n  right: 0%;\r\n  bottom: 0;\r\n  background-color: white !important;\r\n  overflow: hidden;\r\n  z-index: 10000;\n}\n.nav[data-v-5663af57] {\r\n  display: flex;\r\n  flex-direction: column;\n}\n.nav li p[data-v-5663af57]{\r\n  display: inline;\n}\n.nav li.active[data-v-5663af57] {\r\n  background-color: blueviolet;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.pointer[data-v-5663af57] {\r\n  cursor: pointer;\n}\n.wrapper[data-v-5663af57] {\r\n  padding-top: 60px;\n}\n.custom-sidebar[data-v-5663af57] {\r\n  position: fixed !important;\r\n  inset: 0;\r\n  background-color: rgba(0, 0, 0, 0.815) !important;\r\n  overflow: hidden;\r\n  z-index: 10000;\n}\n.sidebar-content[data-v-5663af57] {\r\n  position: absolute !important;\r\n  width: 250px;\r\n  top: 0;\r\n  right: 0%;\r\n  bottom: 0;\r\n  background-color: white !important;\r\n  overflow: hidden;\r\n  z-index: 10000;\n}\n.logo[data-v-5663af57] {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  padding: 1rem;\n}\n.nav[data-v-5663af57] {\r\n  display: flex;\r\n  flex-direction: column;\n}\n.nav li[data-v-5663af57] {\r\n  padding-block: 0.7rem;\n}\n.nav li p[data-v-5663af57]{\r\n  display: inline;\r\n  padding-inline: 0.5rem;\n}\n.nav li.active[data-v-5663af57] {\r\n  background-color: blueviolet;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
