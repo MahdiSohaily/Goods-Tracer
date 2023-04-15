@@ -113,6 +113,19 @@
   overflow: hidden;
   z-index: 10000;
 }
+
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav li p{
+  display: inline;
+}
+
+.nav li.active {
+  background-color: blueviolet;
+}
 </style>
 
 <script>
