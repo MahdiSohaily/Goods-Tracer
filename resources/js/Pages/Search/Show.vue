@@ -47,7 +47,7 @@
                         <th
                           v-for="(item, index) in rates"
                           v-bind:key="index"
-                          v-bind:style="{ backgroundColor: colors[index] }"
+                          :class="item.status"
                         >
                           <span> {{ item.rate }}</span>
                         </th>
@@ -57,7 +57,6 @@
                           class="col-12"
                           v-for="(good, index) in goods"
                           v-bind:key="index"
-                          style="background-color: blue"
                         >
                           <td class="prime-bg">
                             <Link
@@ -74,7 +73,7 @@
                           <td
                             v-for="(item, index) in rates"
                             v-bind:key="index"
-                            v-bind:style="{ backgroundColor: colors[index] }"
+                            :class="item.status"
                           >
                             <span> {{ item.rate * good.price }}</span>
                           </td>
@@ -117,11 +116,11 @@ input {
 }
 
 .prime-bg {
-  background-color: #04e989;
+  background-color: #a5f7db;
 }
 
 .A {
-  background-color: #8bb63a;
+  background-color: seagreen;
 }
 
 .B {
