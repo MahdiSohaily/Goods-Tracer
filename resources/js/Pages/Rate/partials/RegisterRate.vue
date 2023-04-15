@@ -59,6 +59,11 @@
     </template>
   </jet-form-section>
 </template>
+<style>
+option{
+  padding: 1rem !important;
+}
+</style>
 
 <script>
 import { defineComponent } from "vue";
