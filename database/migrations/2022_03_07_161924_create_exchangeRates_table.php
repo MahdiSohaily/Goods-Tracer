@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('exchangeRates', function (Blueprint $table) {
             $table->id();
             $table->integer('rate');
+            $table->string('status');
             $table->timestamps();
         });
     }
