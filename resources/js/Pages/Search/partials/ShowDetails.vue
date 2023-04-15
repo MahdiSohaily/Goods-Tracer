@@ -29,10 +29,12 @@
                                         </div>
                                         <table class="table table-hover">
                                             <thead>
-                                                <th class="prime-bg">سریال نمبر</th>
-                                                <th class="prime-bg">قیمت</th>
-                                                <th class="prime-bg">وزن</th>
-                                                <th v-for="(item, index) in rates" v-bind:key="index" :class="item.status">
+                                                <th class="prime-bg-title">سریال نمبر</th>
+                                                <th class="prime-bg-title">قیمت</th>
+                                                <th class="prime-bg-title">وزن</th>
+                                                <th v-for="(item, index) in rates" v-bind:key="index" :class="
+                                                    item.status !== 'N' ? item.status : 'prime-bg-title'
+                                                ">
                                                     <span> {{ item.rate }}</span>
                                                 </th>
                                             </thead>
@@ -111,6 +113,10 @@ input {
     color: white;
 }
 
+.prime-bg-title {
+    background-color: #76af9c;
+}
+
 .pointer {
     padding-inline: 0.5rem;
     cursor: pointer;
@@ -118,7 +124,7 @@ input {
 }
 
 .prime-bg {
-    background-color: #04e989;
+    background-color: #a5f7db;
 }
 
 .dollar-bg {
