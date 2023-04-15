@@ -125,6 +125,38 @@ input {
 .dollar-bg {
     background-color: #767776;
 }
+
+.A {
+  background-color: seagreen;
+}
+
+.B {
+  background-color: aqua;
+}
+
+.C {
+  background-color: #b68f3a;
+}
+
+.D {
+  background-color: #b63a95;
+}
+
+.E{
+  background-color: #3a86b6;
+}
+
+.F {
+  background-color: #de6ffa;
+}
+
+.G {
+  background-color: #fc8ea0;
+}
+
+.N {
+  background-color: #a5f7db;
+}
 </style>
 
 <script>
