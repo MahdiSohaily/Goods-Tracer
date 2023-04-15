@@ -70,7 +70,7 @@
                                                 <tr class="col-12" v-for="(good, index) in goods" v-bind:key="index"
                                                     style="background-color: blue">
                                                     <td class="prime-bg">
-                                                        <Link class="nav-link" :href="route('search.show', good.id)">
+                                                        <Link :href="route('search.show', good.id)">
                                                         <i class="material-icons pointer">help</i>
                                                         </Link>
                                                         {{ good.serial }}

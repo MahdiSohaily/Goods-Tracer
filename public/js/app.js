@@ -28255,7 +28255,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
             "background-color": "blue"
           }
         }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_31, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-          "class": "nav-link",
           href: _ctx.route('search.show', good.id)
         }, {
           "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
