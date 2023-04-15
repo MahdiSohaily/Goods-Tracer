@@ -46,7 +46,7 @@
                                             </thead>
                                             <tbody>
                                                 <tr v-for="(rate, index) in rates" v-bind:key="index">
-                                                    <td>{{ rate.id }}</td>
+                                                    <td>{{ index+1 }}</td>
                                                     <td>{{ rate.rate }}</td>
                                                     <td>{{ rate.status }}</td>
                                                     <td class="td-actions text-right">
