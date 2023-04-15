@@ -24175,7 +24175,9 @@ var _hoisted_3 = /*#__PURE__*/_withScopeId(function () {
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     href: "",
     "class": "simple-text logo-normal"
-  }, " مینوی سیستم ")], -1
+  }, " مینوی سیستم "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+    "class": "material-icons"
+  }, "close")], -1
   /* HOISTED */
   );
 });
@@ -24190,7 +24192,7 @@ var _hoisted_5 = {
 var _hoisted_6 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
     "class": "material-icons"
-  }, "youtube_searched_for", -1
+  }, "search", -1
   /* HOISTED */
   );
 });
@@ -24258,7 +24260,7 @@ var _hoisted_17 = /*#__PURE__*/_withScopeId(function () {
     "class": "navbar-wrapper"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
     "class": "material-icons"
-  }, "dehaze")], -1
+  }, "menu")], -1
   /* HOISTED */
   );
 });
@@ -24309,7 +24311,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     title: _ctx.title
   }, null, 8
   /* PROPS */
-  , ["title"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <li :class=\"title === 'داشبورد' ? 'active' : ''\" class=\"nav-item\">\r\n            <Link :as=\"a\" class=\"nav-link\" :href=\"route('dashboard')\">\r\n              <i class=\"material-icons\">dashboard</i>\r\n              <p>داشبورد</p>\r\n            </Link>\r\n          </li> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+  , ["title"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([_ctx.title === 'جستجوی اجناس' ? 'active' : '', "nav-item"])
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
     "class": "nav-link",
