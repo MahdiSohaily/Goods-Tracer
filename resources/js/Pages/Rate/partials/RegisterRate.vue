@@ -84,7 +84,7 @@ export default defineComponent({
       form: this.$inertia.form({
         _method: "post",
         rate: null,
-        status: null,
+        status: N,
       }),
     };
   },

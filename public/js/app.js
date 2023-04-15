@@ -22910,7 +22910,7 @@ __webpack_require__.r(__webpack_exports__);
       form: this.$inertia.form({
         _method: "post",
         rate: null,
-        status: null
+        status: N
       })
     };
   },
