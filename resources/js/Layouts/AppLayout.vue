@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
-    <Head :title="title"/>
+    <Head :title="title" />
     <div
-      class="sidebar"
+      class="custom-sidebar"
       data-color="purple"
       data-background-color="white"
       data-image="img/sidebar-4.jpg"
@@ -56,7 +56,7 @@
       </div>
     </div>
     <!-- Page Content -->
-    <div class="main-panel">
+    <div class="main-pane">
       <!-- Navbar -->
       <nav
         class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top"
@@ -146,6 +146,20 @@
     </div>
   </div>
 </template>
+<style scoped>
+.wrapper {
+  padding-top: 60px;
+}
+.custom-sidebar {
+  position: fixed !important;
+  width: 250px !important;
+  background-color: white !important;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10000;
+}
+</style>
 
 <script>
 import { defineComponent } from "vue";
