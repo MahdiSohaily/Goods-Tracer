@@ -146,6 +146,10 @@ input {
 .G {
   background-color: #fc8ea0;
 }
+
+.N {
+  background-color: #a5f7db;
+}
 </style>
 
 <script>
