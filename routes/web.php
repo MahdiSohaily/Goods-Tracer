@@ -32,6 +32,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     /*Dashboard Route*/
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', function () {
+        return redirect('/search');
+    });
 
      /*Profile related Routes*/
      Route::controller(ProfileController::class)->group(function () {
