@@ -2,13 +2,12 @@
   <div class="wrapper">
     <Head :title="title" />
     <div
-      id="s-container"
-      class="custom-sidebar"
+      id="s-sidebar"
+      class="sidebar-content"
       data-color="purple"
       data-background-color="white"
       data-image="img/sidebar-4.jpg"
     >
-      <div class="sidebar-content" id="s-sidebar">
         <div class="logo">
           <a href="" class="simple-text logo-normal"> مینوی سیستم </a>
           <i class="material-icons pointer" id="close">close</i>
@@ -51,7 +50,6 @@
             </li>
           </ul>
         </div>
-      </div>
     </div>
     <!-- Page Content -->
     <div class="main-pane">
@@ -141,23 +139,30 @@
 }
 
 .custom-sidebar {
-  display: none;
   position: fixed !important;
-  inset: 0;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  right: -100%;
   background-color: rgba(0, 0, 0, 0.815) !important;
   overflow: hidden;
   z-index: 10000;
+  transition: all 0.5s ease-in-out;
 }
 
 .sidebar-content {
-  position: absolute !important;
+  position: fixed !important;
   width: 250px;
   top: 0;
-  left: 100%;
+  right: -100%;
   bottom: 0;
   background-color: white !important;
   overflow: hidden;
   z-index: 10000;
+  transition: all 0.5s ease-in-out;
+}
+.mk-active{
+  right: 0% !important;
 }
 .logo {
   display: flex;
@@ -220,13 +225,9 @@ export default defineComponent({
     logout() {
       this.$inertia.post(route("logout"));
     },
-    toggleMenu() {
-      alert("hello");
-    },
   },
   mounted() {
     //menu container and sidebar instances
-    const container = document.getElementById("s-container");
     const sidebar = document.getElementById("s-sidebar");
 
     // buttons to handle menu toggle
@@ -234,12 +235,10 @@ export default defineComponent({
     const open = document.getElementById("open");
 
     open.addEventListener("click", function () {
-      container.style.display = 'block';
-      sidebar.style.right = 0;
+      sidebar.classList.add('mk-active');
     });
     close.addEventListener("click", function () {
-      container.style.display = 'none';
-      sidebar.style.right = '100%';
+      sidebar.classList.remove('mk-active');
     });
   },
 });
