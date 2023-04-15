@@ -32,8 +32,7 @@
                                                 <th class="prime-bg">سریال نمبر</th>
                                                 <th class="prime-bg">قیمت</th>
                                                 <th class="prime-bg">وزن</th>
-                                                <th v-for="(item, index) in rates" v-bind:key="index"
-                                                    v-bind:style="{ backgroundColor: colors[index] }">
+                                                <th v-for="(item, index) in rates" v-bind:key="index" :class="item.status">
                                                     <span> {{ item.rate }}</span>
                                                 </th>
                                             </thead>
@@ -48,7 +47,7 @@
                                                     <td class="prime-bg">{{ result.price }}</td>
                                                     <td class="prime-bg">{{ result.weigth }}</td>
                                                     <td v-for="(item, index) in rates" v-bind:key="index"
-                                                        v-bind:style="{ backgroundColor: colors[index] }">
+                                                        :class="item.status">
                                                         <span> {{ item.rate * result.price }}</span>
                                                     </td>
                                                 </tr>
@@ -77,7 +76,7 @@
                                                     <td class="prime-bg">{{ good.price }}</td>
                                                     <td class="prime-bg">{{ good.weigth }}</td>
                                                     <td v-for="(item, index) in rates" v-bind:key="index"
-                                                        v-bind:style="{ backgroundColor: colors[index] }">
+                                                        :class="item.status">
                                                         <span> {{ item.rate * good.price }}</span>
                                                     </td>
                                                 </tr>
@@ -127,35 +126,35 @@ input {
 }
 
 .A {
-  background-color: seagreen;
+    background-color: seagreen;
 }
 
 .B {
-  background-color: aqua;
+    background-color: aqua;
 }
 
 .C {
-  background-color: #b68f3a;
+    background-color: #b68f3a;
 }
 
 .D {
-  background-color: #b63a95;
+    background-color: #b63a95;
 }
 
-.E{
-  background-color: #3a86b6;
+.E {
+    background-color: #3a86b6;
 }
 
 .F {
-  background-color: #de6ffa;
+    background-color: #de6ffa;
 }
 
 .G {
-  background-color: #fc8ea0;
+    background-color: #fc8ea0;
 }
 
 .N {
-  background-color: #a5f7db;
+    background-color: #a5f7db;
 }
 </style>
 

@@ -28117,13 +28117,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       }, "جستجوی پیشرفته ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [_hoisted_18, _hoisted_19, _hoisted_20, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.rates, function (item, index) {
         return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("th", {
           key: index,
-          style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)({
-            backgroundColor: _ctx.colors[index]
-          })
+          "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(item.status)
         }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.rate), 1
         /* TEXT */
-        )], 4
-        /* STYLE */
+        )], 2
+        /* CLASS */
         );
       }), 128
       /* KEYED_FRAGMENT */
@@ -28136,13 +28134,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       ), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.rates, function (item, index) {
         return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("td", {
           key: index,
-          style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)({
-            backgroundColor: _ctx.colors[index]
-          })
+          "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(item.status)
         }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.rate * _ctx.result.price), 1
         /* TEXT */
-        )], 4
-        /* STYLE */
+        )], 2
+        /* CLASS */
         );
       }), 128
       /* KEYED_FRAGMENT */
@@ -28189,13 +28185,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         ), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.rates, function (item, index) {
           return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("td", {
             key: index,
-            style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)({
-              backgroundColor: _ctx.colors[index]
-            })
+            "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(item.status)
           }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.rate * good.price), 1
           /* TEXT */
-          )], 4
-          /* STYLE */
+          )], 2
+          /* CLASS */
           );
         }), 128
         /* KEYED_FRAGMENT */
@@ -28551,7 +28545,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n[data-v-ff828b54]:-ms-input-placeholder {\r\n    /* Internet Explorer 10-11 */\r\n    color: white;\n}\n[data-v-ff828b54]::-moz-placeholder {\r\n    color: white;\n}\n[data-v-ff828b54]::placeholder {\r\n    color: white;\n}\ninput[data-v-ff828b54] {\r\n    color: white;\n}\n.pointer[data-v-ff828b54] {\r\n    padding-inline: 0.5rem;\r\n    cursor: pointer;\r\n    color: rgb(0, 0, 0);\n}\n.prime-bg[data-v-ff828b54] {\r\n    background-color: #04e989;\n}\n.dollar-bg[data-v-ff828b54] {\r\n    background-color: #767776;\n}\n.A[data-v-ff828b54] {\r\n  background-color: seagreen;\n}\n.B[data-v-ff828b54] {\r\n  background-color: aqua;\n}\n.C[data-v-ff828b54] {\r\n  background-color: #b68f3a;\n}\n.D[data-v-ff828b54] {\r\n  background-color: #b63a95;\n}\n.E[data-v-ff828b54]{\r\n  background-color: #3a86b6;\n}\n.F[data-v-ff828b54] {\r\n  background-color: #de6ffa;\n}\n.G[data-v-ff828b54] {\r\n  background-color: #fc8ea0;\n}\n.N[data-v-ff828b54] {\r\n  background-color: #a5f7db;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n[data-v-ff828b54]:-ms-input-placeholder {\r\n    /* Internet Explorer 10-11 */\r\n    color: white;\n}\n[data-v-ff828b54]::-moz-placeholder {\r\n    color: white;\n}\n[data-v-ff828b54]::placeholder {\r\n    color: white;\n}\ninput[data-v-ff828b54] {\r\n    color: white;\n}\n.pointer[data-v-ff828b54] {\r\n    padding-inline: 0.5rem;\r\n    cursor: pointer;\r\n    color: rgb(0, 0, 0);\n}\n.prime-bg[data-v-ff828b54] {\r\n    background-color: #04e989;\n}\n.dollar-bg[data-v-ff828b54] {\r\n    background-color: #767776;\n}\n.A[data-v-ff828b54] {\r\n    background-color: seagreen;\n}\n.B[data-v-ff828b54] {\r\n    background-color: aqua;\n}\n.C[data-v-ff828b54] {\r\n    background-color: #b68f3a;\n}\n.D[data-v-ff828b54] {\r\n    background-color: #b63a95;\n}\n.E[data-v-ff828b54] {\r\n    background-color: #3a86b6;\n}\n.F[data-v-ff828b54] {\r\n    background-color: #de6ffa;\n}\n.G[data-v-ff828b54] {\r\n    background-color: #fc8ea0;\n}\n.N[data-v-ff828b54] {\r\n    background-color: #a5f7db;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
