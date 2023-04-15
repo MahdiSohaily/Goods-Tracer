@@ -132,11 +132,11 @@ input {
 }
 
 .A {
-    background-color: seagreen;
+    background-color: rgb(240, 53, 53);
 }
 
 .B {
-    background-color: aqua;
+    background-color: rgb(243, 193, 54);
 }
 
 .C {
