@@ -9,7 +9,8 @@
                                 <div class="row pb-2">
                                     <div class="col-md-12">
                                         <label class="text-white">سریال نمبر</label>
-                                        <input id="search" class="mt-1 form-control" v-model="serial" />
+                                        <input id="search" class="mt-1 form-control" ref="focused" @keyup="submit"
+                                            v-model="serial" />
                                     </div>
                                 </div>
                             </div>
@@ -22,12 +23,12 @@
                                     <div class="card-body table-responsive">
                                         <div class="col-md-12">
                                             <input :checked="this.mode" type="checkbox" name="mode" id="mode"
-                                                v-model="this.mode" @click="submit" />
+                                                v-model="this.mode" @keyup="submit" />
                                             <label for="mode" class="pointer" @click="submit">جستجوی پیشرفته
                                             </label>
                                         </div>
                                         <table class="table table-hover">
-                                            <thead class="">
+                                            <thead>
                                                 <th class="prime-bg">سریال نمبر</th>
                                                 <th class="prime-bg">قیمت</th>
                                                 <th class="prime-bg">وزن</th>
@@ -37,11 +38,12 @@
                                                 </th>
                                             </thead>
                                             <tbody>
-                                                <tr class="col-12" style="background-color: blue">
+                                                <tr v-if="goods == null">
                                                     <td class="prime-bg">
-                                                        <span><i v-if="result.dollarRate" class="material-icons">check_circle</i>
-                                                        <i v-else class="material-icons">cancel</i>
-                                                        {{ result.serial }}</span>
+                                                        <span><i v-if="result.dollarRate"
+                                                                class="material-icons">check_circle</i>
+                                                            <i v-else class="material-icons">cancel</i>
+                                                            {{ result.serial }}</span>
                                                     </td>
                                                     <td class="prime-bg">{{ result.price }}</td>
                                                     <td class="prime-bg">{{ result.weigth }}</td>
@@ -50,24 +52,26 @@
                                                         <span> {{ item.rate * result.price }}</span>
                                                     </td>
                                                 </tr>
-                                                <tr class="col-12" style="background-color: blue">
-                                                    <td class="prime-bg">
-                                                        <span><i v-if="result.dollarRate" class="material-icons">check_circle</i>
-                                                        <i v-else class="material-icons">cancel</i>
-                                                        {{ result.serial }}</span>
+                                                <tr v-if="result.dollarRate && goods == null">
+                                                    <td class="dollar-bg">
+                                                        <span>{{ result.serial }}-M</span>
                                                     </td>
-                                                    <td class="prime-bg">{{ result.price }}</td>
-                                                    <td class="prime-bg">{{ result.weigth }}</td>
-                                                    <td v-for="(item, index) in rates" v-bind:key="index"
-                                                        v-bind:style="{ backgroundColor: colors[index] }">
-                                                        <span> {{ item.rate * result.price }}</span>
+                                                    <td class="dollar-bg">{{ result.price }}</td>
+                                                    <td class="dollar-bg">{{ result.weigth }}</td>
+                                                    <td class="dollar-bg" v-for="(item, index) in rates" v-bind:key="index">
+                                                        <span>
+                                                            {{
+                                                                item.rate * result.price * result.dollarRate
+                                                            }}</span>
                                                     </td>
                                                 </tr>
 
                                                 <tr class="col-12" v-for="(good, index) in goods" v-bind:key="index"
                                                     style="background-color: blue">
                                                     <td class="prime-bg">
-                                                        <i class="material-icons pointer" @click="check(good.id)">help</i>
+                                                        <Link class="nav-link" :href="route('search.show', good.id)">
+                                                        <i class="material-icons pointer">help</i>
+                                                        </Link>
                                                         {{ good.serial }}
                                                     </td>
                                                     <td class="prime-bg">{{ good.price }}</td>
@@ -116,6 +120,10 @@ input {
 
 .prime-bg {
     background-color: #04e989;
+}
+
+.dollar-bg {
+    background-color: #767776;
 }
 </style>
 

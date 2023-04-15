@@ -41,9 +41,9 @@
                     </div>
                     <table class="table table-hover">
                       <thead class="">
-                        <th class="text-center prime-bg">سریال نمبر</th>
-                        <th class="text-center prime-bg">قیمت</th>
-                        <th class="text-center prime-bg">وزن</th>
+                        <th class="prime-bg">سریال نمبر</th>
+                        <th class="prime-bg">قیمت</th>
+                        <th class="prime-bg">وزن</th>
                         <th
                           v-for="(item, index) in rates"
                           v-bind:key="index"
