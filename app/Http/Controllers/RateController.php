@@ -40,10 +40,12 @@ class RateController extends Controller
     {
         $validated = $request->validate([
             'rate' => 'required|integer|min:0',
+            'status' => 'required',
         ]);
 
         $rate = new Rate();
         $rate-> rate = $request->input('rate');
+        $rate-> status = $request->input('status');
         $rate->save();
 
         return $this->index();
