@@ -51,7 +51,7 @@
                                                     <td>{{ good.id }}</td>
                                                     <td>{{ good.serial }}</td>
                                                     <td>{{ good.price }}</td>
-                                                    <td>{{ good.weigth }}</td>
+                                                    <td>{{ good.weight }}</td>
                                                     <td>{{ good.dollarRate }}</td>
                                                     <td class="td-actions text-right">
                                                         <Link :href="route('good.edit', good)"
