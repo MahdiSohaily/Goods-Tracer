@@ -119,6 +119,34 @@ input {
 .prime-bg {
   background-color: #04e989;
 }
+
+.A {
+  background-color: #8bb63a;
+}
+
+.B {
+  background-color: aqua;
+}
+
+.C {
+  background-color: #b68f3a;
+}
+
+.D {
+  background-color: #b63a95;
+}
+
+.E{
+  background-color: #3a86b6;
+}
+
+.F {
+  background-color: #de6ffa;
+}
+
+.G {
+  background-color: #fc8ea0;
+}
 </style>
 
 <script>
