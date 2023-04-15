@@ -61,7 +61,7 @@
                         >
                           <td class="prime-bg">
                             <Link
-                              class="nav-link"
+                              class=""
                               :href="route('search.show', good.id)"
                             >
                               <i class="material-icons pointer">help</i>
