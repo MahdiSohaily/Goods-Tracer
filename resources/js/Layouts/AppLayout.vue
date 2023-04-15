@@ -63,21 +63,9 @@
       >
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="#pablo">{{ title }}</a>
+            <i class="material-icons">dehaze</i>
           </div>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            aria-controls="navigation-index"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="sr-only">Toggle navigation</span>
-            <span class="navbar-toggler-icon icon-bar"></span>
-            <span class="navbar-toggler-icon icon-bar"></span>
-            <span class="navbar-toggler-icon icon-bar"></span>
-          </button>
+          
           <div class="collapse navbar-collapse justify-content-end">
             <ul class="navbar-nav">
               <li class="nav-item">
@@ -156,7 +144,7 @@
   background-color: white !important;
   top: 0;
   bottom: 0;
-  right: 0;
+  left: 100%;
   z-index: 10000;
 }
 </style>

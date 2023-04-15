@@ -24252,30 +24252,31 @@ var _hoisted_15 = {
 var _hoisted_16 = {
   "class": "container-fluid"
 };
-var _hoisted_17 = {
-  "class": "navbar-wrapper"
-};
+
+var _hoisted_17 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "navbar-wrapper"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+    "class": "material-icons"
+  }, "dehaze")], -1
+  /* HOISTED */
+  );
+});
+
 var _hoisted_18 = {
-  "class": "navbar-brand",
-  href: "#pablo"
-};
-
-var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" aria-controls=\"navigation-index\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" data-v-5663af57><span class=\"sr-only\" data-v-5663af57>Toggle navigation</span><span class=\"navbar-toggler-icon icon-bar\" data-v-5663af57></span><span class=\"navbar-toggler-icon icon-bar\" data-v-5663af57></span><span class=\"navbar-toggler-icon icon-bar\" data-v-5663af57></span></button>", 1);
-
-var _hoisted_20 = {
   "class": "collapse navbar-collapse justify-content-end"
 };
-var _hoisted_21 = {
+var _hoisted_19 = {
   "class": "navbar-nav"
 };
 
-var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<li class=\"nav-item\" data-v-5663af57><a class=\"nav-link\" href=\"#pablo\" data-v-5663af57><i class=\"material-icons\" data-v-5663af57>dashboard</i><p class=\"d-lg-none d-md-block\" data-v-5663af57>آمارها</p></a></li><li class=\"nav-item dropdown\" data-v-5663af57><a class=\"nav-link\" href=\"http://example.com\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" data-v-5663af57><i class=\"material-icons\" data-v-5663af57>notifications</i><span class=\"notification\" data-v-5663af57>۵</span><p class=\"d-lg-none d-md-block\" data-v-5663af57>اعلان‌ها</p></a><div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"navbarDropdownMenuLink\" data-v-5663af57><a class=\"dropdown-item\" href=\"#\" data-v-5663af57>محمدرضا به ایمیل شما پاسخ داد</a><a class=\"dropdown-item\" href=\"#\" data-v-5663af57>شما ۵ وظیفه جدید دارید</a><a class=\"dropdown-item\" href=\"#\" data-v-5663af57>از حالا شما با علیرضا دوست هستید</a><a class=\"dropdown-item\" href=\"#\" data-v-5663af57>اعلان دیگر</a><a class=\"dropdown-item\" href=\"#\" data-v-5663af57>اعلان دیگر</a></div></li>", 2);
+var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<li class=\"nav-item\" data-v-5663af57><a class=\"nav-link\" href=\"#pablo\" data-v-5663af57><i class=\"material-icons\" data-v-5663af57>dashboard</i><p class=\"d-lg-none d-md-block\" data-v-5663af57>آمارها</p></a></li><li class=\"nav-item dropdown\" data-v-5663af57><a class=\"nav-link\" href=\"http://example.com\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" data-v-5663af57><i class=\"material-icons\" data-v-5663af57>notifications</i><span class=\"notification\" data-v-5663af57>۵</span><p class=\"d-lg-none d-md-block\" data-v-5663af57>اعلان‌ها</p></a><div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"navbarDropdownMenuLink\" data-v-5663af57><a class=\"dropdown-item\" href=\"#\" data-v-5663af57>محمدرضا به ایمیل شما پاسخ داد</a><a class=\"dropdown-item\" href=\"#\" data-v-5663af57>شما ۵ وظیفه جدید دارید</a><a class=\"dropdown-item\" href=\"#\" data-v-5663af57>از حالا شما با علیرضا دوست هستید</a><a class=\"dropdown-item\" href=\"#\" data-v-5663af57>اعلان دیگر</a><a class=\"dropdown-item\" href=\"#\" data-v-5663af57>اعلان دیگر</a></div></li>", 2);
 
-var _hoisted_24 = {
+var _hoisted_22 = {
   "class": "nav-item dropdown"
 };
 
-var _hoisted_25 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_23 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     "class": "nav-link",
     href: "http://example.com",
@@ -24292,12 +24293,12 @@ var _hoisted_25 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-var _hoisted_26 = {
+var _hoisted_24 = {
   "class": "dropdown-menu dropdown-menu-right",
   "aria-labelledby": "navbarDropdownProfileLink"
 };
 
-var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("پروفایل کاربری/تنظیمات ");
+var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("پروفایل کاربری/تنظیمات ");
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Head = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Head");
@@ -24373,14 +24374,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* PROPS */
   , ["href"])], 2
   /* CLASS */
-  )])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Page Content "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Navbar "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.title), 1
-  /* TEXT */
-  )]), _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_21, [_hoisted_22, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_24, [_hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+  )])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Page Content "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Navbar "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_19, [_hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_22, [_hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
     href: _ctx.route('profile'),
     "class": "dropdown-item"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_27];
+      return [_hoisted_25];
     }),
     _: 1
     /* STABLE */
@@ -28589,7 +28588,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.wrapper[data-v-5663af57] {\r\n  padding-top: 60px;\n}\n.custom-sidebar[data-v-5663af57] {\r\n  position: fixed !important;\r\n  width: 250px !important;\r\n  background-color: white !important;\r\n  top: 0;\r\n  bottom: 0;\r\n  right: 0;\r\n  z-index: 10000;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.wrapper[data-v-5663af57] {\r\n  padding-top: 60px;\n}\n.custom-sidebar[data-v-5663af57] {\r\n  position: fixed !important;\r\n  width: 250px !important;\r\n  background-color: white !important;\r\n  top: 0;\r\n  bottom: 0;\r\n  left: 100%;\r\n  z-index: 10000;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
