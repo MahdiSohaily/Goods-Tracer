@@ -24163,13 +24163,15 @@ var _hoisted_1 = {
   "class": "wrapper"
 };
 var _hoisted_2 = {
+  id: "s-container",
   "class": "custom-sidebar",
   "data-color": "purple",
   "data-background-color": "white",
   "data-image": "img/sidebar-4.jpg"
 };
 var _hoisted_3 = {
-  "class": "sidebar-content"
+  "class": "sidebar-content",
+  id: "s-sidebar"
 };
 
 var _hoisted_4 = /*#__PURE__*/_withScopeId(function () {
@@ -24179,7 +24181,8 @@ var _hoisted_4 = /*#__PURE__*/_withScopeId(function () {
     href: "",
     "class": "simple-text logo-normal"
   }, " مینوی سیستم "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-    "class": "material-icons pointer close"
+    "class": "material-icons pointer",
+    id: "close"
   }, "close")], -1
   /* HOISTED */
   );
@@ -24262,7 +24265,8 @@ var _hoisted_18 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "navbar-wrapper"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-    "class": "material-icons pointer open"
+    "class": "material-icons pointer",
+    id: "open"
   }, "menu")], -1
   /* HOISTED */
   );

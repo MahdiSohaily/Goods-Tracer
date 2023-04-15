@@ -2,15 +2,16 @@
   <div class="wrapper">
     <Head :title="title" />
     <div
+    id="s-container"
       class="custom-sidebar"
       data-color="purple"
       data-background-color="white"
       data-image="img/sidebar-4.jpg"
     >
-      <div class="sidebar-content">
+      <div class="sidebar-content" id="s-sidebar">
         <div class="logo">
           <a href="" class="simple-text logo-normal"> مینوی سیستم </a>
-          <i class="material-icons pointer close">close</i>
+          <i class="material-icons pointer" id="close">close</i>
         </div>
         <div class="sidebar-wrapper">
           <ul class="nav">
@@ -60,7 +61,7 @@
       >
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <i class="material-icons pointer open">menu</i>
+            <i class="material-icons pointer" id="open">menu</i>
           </div>
 
           <div class="collapse navbar-collapse justify-content-end">
