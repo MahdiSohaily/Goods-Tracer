@@ -135,7 +135,7 @@
   cursor: pointer;
 }
 .wrapper {
-  padding-top: 60px;
+  padding-top: 40px;
 }
 
 .custom-sidebar {
