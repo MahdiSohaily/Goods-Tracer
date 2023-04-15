@@ -30,11 +30,11 @@ Route::get('/', function () {
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
-    /*Dashboard Route*/
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/dashboard', function () {
         return redirect('/search');
     });
+    /*Dashboard Route*/
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
      /*Profile related Routes*/
      Route::controller(ProfileController::class)->group(function () {
