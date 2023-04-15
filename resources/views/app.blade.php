@@ -49,8 +49,6 @@
 <script src="{{ asset("js/core/popper.min.js") }}" type="text/javascript"></script>
 <script src="{{ asset("js/core/bootstrap-material-design.min.js?v=3") }}" type="text/javascript"></script>
 <script src="{{ asset("js/plugins/perfect-scrollbar.jquery.min.js?v=3") }}"></script>
-<!-- Place this tag in your head or just before your close body tag. -->
-<script async defer src="https://buttons.github.io/buttons.js?v=3"></script>
 <!--  Notifications Plugin    -->
 <script src="{{ asset("js/plugins/bootstrap-notify.js") }}"></script>
 <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
