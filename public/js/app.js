@@ -21994,7 +21994,26 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     logout: function logout() {
       this.$inertia.post(route("logout"));
+    },
+    toggleMenu: function toggleMenu() {
+      alert("hello");
     }
+  },
+  mounted: function mounted() {
+    //menu container and sidebar instances
+    var container = document.getElementById("s-container");
+    var sidebar = document.getElementById("s-sidebar"); // buttons to handle menu toggle
+
+    var close = document.getElementById("close");
+    var open = document.getElementById("open");
+    open.addEventListener("click", function () {
+      container.style.display = 'block';
+      sidebar.style.right = 0;
+    });
+    close.addEventListener("click", function () {
+      container.style.display = 'none';
+      sidebar.style.right = '100%';
+    });
   }
 }));
 

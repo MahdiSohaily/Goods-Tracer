@@ -2,7 +2,7 @@
   <div class="wrapper">
     <Head :title="title" />
     <div
-    id="s-container"
+      id="s-container"
       class="custom-sidebar"
       data-color="purple"
       data-background-color="white"
@@ -220,6 +220,27 @@ export default defineComponent({
     logout() {
       this.$inertia.post(route("logout"));
     },
+    toggleMenu() {
+      alert("hello");
+    },
+  },
+  mounted() {
+    //menu container and sidebar instances
+    const container = document.getElementById("s-container");
+    const sidebar = document.getElementById("s-sidebar");
+
+    // buttons to handle menu toggle
+    const close = document.getElementById("close");
+    const open = document.getElementById("open");
+
+    open.addEventListener("click", function () {
+      container.style.display = 'block';
+      sidebar.style.right = 0;
+    });
+    close.addEventListener("click", function () {
+      container.style.display = 'none';
+      sidebar.style.right = '100%';
+    });
   },
 });
 </script>

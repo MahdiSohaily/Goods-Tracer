@@ -53,7 +53,6 @@
 <script src="{{ asset("js/plugins/bootstrap-notify.js") }}"></script>
 <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="{{ asset("js/material-dashboard.min.js") }}" type="text/javascript"></script>
-<script src="{{ asset("js/script.js") }}" type="text/javascript"></script>
 <script>
     $(document).ready(function () {
         $().ready(function () {
