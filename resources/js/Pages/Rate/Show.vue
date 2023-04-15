@@ -33,8 +33,8 @@
                             <div :class="tab === 'list' ? 'active' : ''" class="tab-pane" id="goodsList">
                                 <div class="card">
                                     <div class="card-header card-header-primary">
-                                        <h5 class="card-title">درخواست های اخیر</h5>
-                                        <small class="card-decription">درخواست های که اخیرا ثبت سیتم گردیده اند</small>
+                                        <h5 class="card-title"> نرخ تبادل ارز</h5>
+                                        <small class="card-decription">نرخ ارزهای که اخیرا ثبت سیتم گردیده اند</small>
                                     </div>
                                     <div class="card-body table-responsive">
                                         <table class="table table-hover">

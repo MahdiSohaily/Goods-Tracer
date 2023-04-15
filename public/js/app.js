@@ -27059,9 +27059,9 @@ var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "card-header card-header-primary"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", {
   "class": "card-title"
-}, "درخواست های اخیر"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("small", {
+}, " نرخ تبادل ارز"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("small", {
   "class": "card-decription"
-}, "درخواست های که اخیرا ثبت سیتم گردیده اند")], -1
+}, "نرخ ارزهای که اخیرا ثبت سیتم گردیده اند")], -1
 /* HOISTED */
 );
 
