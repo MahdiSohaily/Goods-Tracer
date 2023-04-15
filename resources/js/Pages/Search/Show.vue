@@ -1,92 +1,67 @@
 <template>
-  <div class="container-fluid">
-    <div class="card">
-      <div class="card-header card-header-tabs card-header-warning">
-        <div class="nav-tabs-navigation">
-          <div class="nav-tabs-wrapper">
-            <div class="row pb-2">
-              <div class="col-md-10">
-                <label class="text-white">سریال نمبر</label>
-                <input
-                  id="search"
-                  class="mt-1 form-control"
-                  ref="focused"
-                  @keyup="submit"
-                  v-model="serial"
-                />
+  <app-layout title="اجناس" :position="$page.props.user.position">
+    <div class="content">
+      <div class="container-fluid">
+        <div class="card">
+          <div class="card-header card-header-tabs card-header-warning">
+            <div class="nav-tabs-navigation">
+              <div class="nav-tabs-wrapper">
+                <div class="row pb-2">
+                  <div class="col-md-10">
+                    <label class="text-white">سریال نمبر</label>
+                    <input id="search" class="mt-1 form-control" ref="focused" @keyup="submit" v-model="serial" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="tab-content">
-          <div class="tab-pane active" id="profile">
-            <div class="card">
-              <div class="card-body table-responsive">
-                <div class="col-md-12">
-                  <input
-                    :checked="this.mode"
-                    type="checkbox"
-                    name="mode"
-                    id="mode"
-                    v-model="this.mode"
-                    @click="submit"
-                  />
-                  <label
-                    for="mode"
-                    class="pointer card-category"
-                    @click="submit"
-                    >جستجوی پیشرفته</label
-                  >
-                </div>
-                <table class="table table-hover">
-                  <thead class="">
-                    <th class="prime-bg-title">سریال نمبر</th>
-                    <th class="prime-bg-title">قیمت</th>
-                    <th class="prime-bg-title">وزن</th>
-                    <th
-                      v-for="(item, index) in rates"
-                      v-bind:key="index"
-                      :class="
-                        item.status !== 'N' ? item.status : 'prime-bg-title'
-                      "
-                    >
-                      <span> {{ item.rate }}</span>
-                    </th>
-                  </thead>
-                  <tbody>
-                    <tr
-                      class="col-12"
-                      v-for="(good, index) in goods"
-                      v-bind:key="index"
-                    >
-                      <td class="prime-bg">
-                        <Link class="" :href="route('search.show', good.id)">
-                          <i class="material-icons pointer">help</i>
-                        </Link>
+          <div class="card-body">
+            <div class="tab-content">
+              <div class="tab-pane active" id="profile">
+                <div class="card">
+                  <div class="card-body table-responsive">
+                    <div class="col-md-12">
+                      <input :checked="this.mode" type="checkbox" name="mode" id="mode" v-model="this.mode"
+                        @click="submit" />
+                      <label for="mode" class="pointer card-category" @click="submit">جستجوی پیشرفته</label>
+                    </div>
+                    <table class="table table-hover">
+                      <thead class="">
+                        <th class="prime-bg-title">سریال نمبر</th>
+                        <th class="prime-bg-title">قیمت</th>
+                        <th class="prime-bg-title">وزن</th>
+                        <th v-for="(item, index) in rates" v-bind:key="index" :class="
+                          item.status !== 'N' ? item.status : 'prime-bg-title'
+                        ">
+                          <span> {{ item.rate }}</span>
+                        </th>
+                      </thead>
+                      <tbody>
+                        <tr class="col-12" v-for="(good, index) in goods" v-bind:key="index">
+                          <td class="prime-bg">
+                            <Link class="" :href="route('search.show', good.id)">
+                            <i class="material-icons pointer">help</i>
+                            </Link>
 
-                        {{ good.serial }}
-                      </td>
-                      <td class="prime-bg">{{ good.price }}</td>
-                      <td class="prime-bg">{{ good.weigth }}</td>
-                      <td
-                        v-for="(item, index) in rates"
-                        v-bind:key="index"
-                        :class="item.status"
-                      >
-                        <span> {{ item.rate * good.price }}</span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                            {{ good.serial }}
+                          </td>
+                          <td class="prime-bg">{{ good.price }}</td>
+                          <td class="prime-bg">{{ good.weigth }}</td>
+                          <td v-for="(item, index) in rates" v-bind:key="index" :class="item.status">
+                            <span> {{ item.rate * good.price }}</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </app-layout>
 </template>
 <style scoped>
 ::-webkit-input-placeholder {
@@ -116,6 +91,7 @@ input {
 .prime-bg-title {
   background-color: #76af9c;
 }
+
 .prime-bg {
   background-color: #a5f7db;
 }
@@ -123,6 +99,7 @@ input {
 .A {
   background-color: rgb(240, 53, 53);
 }
+
 .B {
   background-color: rgb(243, 193, 54);
 }
