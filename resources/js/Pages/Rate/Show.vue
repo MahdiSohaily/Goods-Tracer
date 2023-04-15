@@ -8,13 +8,13 @@
                             <div class="nav-tabs-wrapper">
                                 <ul class="nav nav-tabs" data-tabs="tabs">
                                     <li class="nav-item">
-                                        <a class="nav-link active" href="#profile" data-toggle="tab">
+                                        <a :class="tab === 'create' ? 'active' : ''" class="nav-link" href="#profile" data-toggle="tab">
                                             <i class="material-icons">fact_check</i>درج نرخ ارز رایج در معاملات
                                             <div class="ripple-container"></div>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#goodsList" data-toggle="tab">
+                                        <a :class="tab === 'list' ? 'active' : ''" class="nav-link" href="#goodsList" data-toggle="tab">
                                             <i class="material-icons">list</i> نرخ های ثبت شده
                                             <div class="ripple-container"></div>
                                         </a>
@@ -41,12 +41,14 @@
                                             <thead class="text-primary">
                                                 <th>شماره</th>
                                                 <th>نرخ ارز</th>
+                                                <th>شاخص نرخ</th>
                                                 <th>عملیات</th>
                                             </thead>
                                             <tbody>
                                                 <tr v-for="(rate, index) in rates" v-bind:key="index">
                                                     <td>{{ rate.id }}</td>
                                                     <td>{{ rate.rate }}</td>
+                                                    <td>{{ rate.status }}</td>
                                                     <td class="td-actions text-right">
                                                         <Link :href="route('rate.edit', rate.id)"
                                                             class="btn btn-primary btn-link btn-sm"
