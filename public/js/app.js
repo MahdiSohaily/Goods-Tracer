@@ -22909,7 +22909,8 @@ __webpack_require__.r(__webpack_exports__);
     return {
       form: this.$inertia.form({
         _method: "post",
-        rate: null
+        rate: null,
+        status: null
       })
     };
   },
@@ -27060,58 +27061,55 @@ var _hoisted_6 = {
   "class": "tab-content"
 };
 var _hoisted_7 = {
-  "class": "row"
-};
-var _hoisted_8 = {
   "class": "card"
 };
 
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "card-header card-header-primary"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", {
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", {
   "class": "card-title"
-}, "درخواست های اخیر"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": "card-category"
+}, "درخواست های اخیر"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("small", {
+  "class": "card-decription"
 }, "درخواست های که اخیرا ثبت سیتم گردیده اند")], -1
 /* HOISTED */
 );
 
-var _hoisted_10 = {
+var _hoisted_9 = {
   "class": "card-body table-responsive"
 };
-var _hoisted_11 = {
+var _hoisted_10 = {
   "class": "table table-hover"
 };
 
-var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", {
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", {
   "class": "text-primary"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", null, "شماره"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", null, "نرخ ارز"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", null, "عملیات")], -1
 /* HOISTED */
 );
 
-var _hoisted_13 = {
+var _hoisted_12 = {
   "class": "td-actions text-right"
 };
 
-var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "material-icons"
 }, "edit", -1
 /* HOISTED */
 );
 
-var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "ripple-container"
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "material-icons"
 }, "close", -1
 /* HOISTED */
 );
 
-var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "ripple-container"
 }, null, -1
 /* HOISTED */
@@ -27132,25 +27130,25 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
         "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([_ctx.tab === 'create' ? 'active' : '', "tab-pane"]),
         id: "profile"
-      }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_RegisterRate)])], 2
+      }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_RegisterRate)], 2
       /* CLASS */
       ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
         "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([_ctx.tab === 'list' ? 'active' : '', "tab-pane"]),
         id: "goodsList"
-      }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.rates, function (rate, index) {
+      }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_10, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.rates, function (rate, index) {
         return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", {
           key: index
         }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(rate.id), 1
         /* TEXT */
         ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(rate.rate), 1
         /* TEXT */
-        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
           href: _ctx.route('rate.edit', rate.id),
           "class": "btn btn-primary btn-link btn-sm",
           "data-original-title": "Edit Task"
         }, {
           "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-            return [_hoisted_14, _hoisted_15];
+            return [_hoisted_13, _hoisted_14];
           }),
           _: 2
           /* DYNAMIC */
@@ -27164,7 +27162,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           "class": "btn btn-danger btn-link btn-sm"
         }, {
           "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-            return [_hoisted_16, _hoisted_17];
+            return [_hoisted_15, _hoisted_16];
           }),
           _: 2
           /* DYNAMIC */
@@ -27314,19 +27312,19 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       }, null, 8
       /* PROPS */
       , ["message"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_label, {
-        "for": "c.position",
+        "for": "c.status",
         value: "شاخص نرخ"
       }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
-        id: "c.position",
+        id: "c.status",
         "class": "form-control",
         "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
-          return _ctx.form.position = $event;
+          return _ctx.form.status = $event;
         }),
         required: ""
       }, _hoisted_12, 512
       /* NEED_PATCH */
-      ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, _ctx.form.position]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_input_error, {
-        message: _ctx.form.errors.position,
+      ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, _ctx.form.status]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_input_error, {
+        message: _ctx.form.errors.status,
         "class": "mt-2"
       }, null, 8
       /* PROPS */

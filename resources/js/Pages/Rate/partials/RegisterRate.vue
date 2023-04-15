@@ -6,19 +6,31 @@
 
     <template #description>
       <small>
-        برای درج نمودن نرخ ارز در سیستم فورم ذیل را به دقت پر نمایید.</small>
+        برای درج نمودن نرخ ارز در سیستم فورم ذیل را به دقت پر نمایید.</small
+      >
     </template>
 
     <template #form>
       <div class="row pb-2">
         <div class="col-md-6">
           <jet-label for="rate" value="نرخ ارز" />
-          <jet-input id="rate" type="number" class="mt-1 form-control" v-model="form.rate" autocomplete="rate" />
+          <jet-input
+            id="rate"
+            type="number"
+            class="mt-1 form-control"
+            v-model="form.rate"
+            autocomplete="rate"
+          />
           <jet-input-error :message="form.errors.rate" class="mt-2" />
         </div>
         <div class="col-md-6">
-          <jet-label for="c.position" value="شاخص نرخ"/>
-          <select id="c.position" class="form-control" v-model="form.position" required>
+          <jet-label for="c.status" value="شاخص نرخ" />
+          <select
+            id="c.status"
+            class="form-control"
+            v-model="form.status"
+            required
+          >
             <option class="text-center" value="A">A</option>
             <option class="text-center" value="B">B</option>
             <option class="text-center" value="C">C</option>
@@ -26,7 +38,7 @@
             <option class="text-center" value="F">F</option>
             <option class="text-center" value="G">G</option>
           </select>
-          <jet-input-error :message="form.errors.position" class="mt-2" />
+          <jet-input-error :message="form.errors.status" class="mt-2" />
         </div>
       </div>
       <div class="clearfix"></div>
@@ -36,8 +48,12 @@
       <jet-action-message :on="form.recentlySuccessful">
         ذخیره سازی نرخ مورد نظر موفقانه صورت گرفت.
       </jet-action-message>
-      <button type="submit" class="btn btn-primary pull-right" :class="{ 'opacity-25': form.processing }"
-        :disabled="form.processing">
+      <button
+        type="submit"
+        class="btn btn-primary pull-right"
+        :class="{ 'opacity-25': form.processing }"
+        :disabled="form.processing"
+      >
         ثبت
       </button>
     </template>
@@ -68,6 +84,7 @@ export default defineComponent({
       form: this.$inertia.form({
         _method: "post",
         rate: null,
+        status: null,
       }),
     };
   },
