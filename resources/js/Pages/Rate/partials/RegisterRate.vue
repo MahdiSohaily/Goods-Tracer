@@ -30,12 +30,13 @@
             class="form-control"
             v-model="form.status"
           >
-            <option class="text-center" value="A">A</option>
-            <option class="text-center" value="B">B</option>
-            <option class="text-center" value="C">C</option>
-            <option class="text-center" value="E">E</option>
-            <option class="text-center" value="F">F</option>
-            <option class="text-center" value="G">G</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="N" selected>N</option>
           </select>
           <jet-input-error :message="form.errors.status" class="mt-2" />
         </div>
