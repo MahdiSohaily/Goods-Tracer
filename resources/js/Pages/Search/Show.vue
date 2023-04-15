@@ -170,7 +170,7 @@ export default defineComponent({
   data() {
     return {
       goods: null,
-      serial: 457544,
+      serial: 304845,
       mode: true,
       colors: ["#8bb63a", "aqua", "#b68f3a", "#b63a95", "#3a86b6"],
     };
