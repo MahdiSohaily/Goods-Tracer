@@ -3,37 +3,39 @@
 
     <Head :title="title" />
     <div class="custom-sidebar" data-color="purple" data-background-color="white" data-image="img/sidebar-4.jpg">
-      <div class="logo">
-        <a href="" class="simple-text logo-normal"> مینوی سیستم </a>
-        <i class="material-icons">close</i>
-      </div>
-      <div class="sidebar-wrapper">
-        <ul class="nav">
-          <li :class="title === 'جستجوی اجناس' ? 'active' : ''" class="nav-item">
-            <Link class="nav-link" :href="route('search')">
-            <i class="material-icons">search</i>
-            <p>جستجوی اجناس</p>
-            </Link>
-          </li>
-          <li v-if="position !== 'کاربر'" :class="title === 'اجناس' ? 'active' : ''" class="nav-item">
-            <Link class="nav-link" :href="route('good')">
-            <i class="material-icons">class</i>
-            <p>راجستر اجناس</p>
-            </Link>
-          </li>
-          <li :class="title === 'نرخ تبادل ارز' ? 'active' : ''" class="nav-item">
-            <Link class="nav-link" :href="route('rate')">
-            <i class="material-icons">local_atm</i>
-            <p>نرخ تبادل ارز</p>
-            </Link>
-          </li>
-          <li :class="title === 'پروفایل' ? 'active' : ''" class="nav-item">
-            <Link class="nav-link" :href="route('profile')">
-            <i class="material-icons">person</i>
-            <p>پروفایل کاربر</p>
-            </Link>
-          </li>
-        </ul>
+      <div class="sidebar-content">
+        <div class="logo">
+          <a href="" class="simple-text logo-normal"> مینوی سیستم </a>
+          <i class="material-icons">close</i>
+        </div>
+        <div class="sidebar-wrapper">
+          <ul class="nav">
+            <li :class="title === 'جستجوی اجناس' ? 'active' : ''" class="nav-item">
+              <Link class="nav-link" :href="route('search')">
+              <i class="material-icons">search</i>
+              <p>جستجوی اجناس</p>
+              </Link>
+            </li>
+            <li v-if="position !== 'کاربر'" :class="title === 'اجناس' ? 'active' : ''" class="nav-item">
+              <Link class="nav-link" :href="route('good')">
+              <i class="material-icons">class</i>
+              <p>راجستر اجناس</p>
+              </Link>
+            </li>
+            <li :class="title === 'نرخ تبادل ارز' ? 'active' : ''" class="nav-item">
+              <Link class="nav-link" :href="route('rate')">
+              <i class="material-icons">local_atm</i>
+              <p>نرخ تبادل ارز</p>
+              </Link>
+            </li>
+            <li :class="title === 'پروفایل' ? 'active' : ''" class="nav-item">
+              <Link class="nav-link" :href="route('profile')">
+              <i class="material-icons">person</i>
+              <p>پروفایل کاربر</p>
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <!-- Page Content -->
@@ -95,11 +97,20 @@
 
 .custom-sidebar {
   position: fixed !important;
-  width: 250px !important;
-  background-color: white !important;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.815) !important;
+  overflow: hidden;
+  z-index: 10000;
+}
+
+.sidebar-content {
+  position: absolute !important;
+  width: 250px;
   top: 0;
+  right: 0%;
   bottom: 0;
-  left: 100%;
+  background-color: white !important;
+  overflow: hidden;
   z-index: 10000;
 }
 </style>
