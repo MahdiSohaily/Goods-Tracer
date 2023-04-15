@@ -141,6 +141,7 @@
 }
 
 .custom-sidebar {
+  display: none;
   position: fixed !important;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.815) !important;
@@ -152,7 +153,7 @@
   position: absolute !important;
   width: 250px;
   top: 0;
-  right: 0%;
+  left: 100%;
   bottom: 0;
   background-color: white !important;
   overflow: hidden;
